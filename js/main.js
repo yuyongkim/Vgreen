@@ -21,19 +21,114 @@ function initializeWebsite() {
 
 // Hero Slider
 function initHeroSlider() {
-    const slides = document.querySelectorAll('.slide');
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.hero-dot');
+    const prevBtn = document.getElementById('prevSlide');
+    const nextBtn = document.getElementById('nextSlide');
     let currentSlide = 0;
+    let autoSlideInterval;
     
     if (slides.length <= 1) return;
     
-    function nextSlide() {
-        slides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add('active');
+    // Show specific slide
+    function showSlide(index) {
+        // Hide all slides
+        slides.forEach(slide => {
+            slide.classList.remove('opacity-100');
+            slide.classList.add('opacity-0');
+        });
+        
+        // Show current slide
+        slides[index].classList.remove('opacity-0');
+        slides[index].classList.add('opacity-100');
+        
+        // Update dots
+        dots.forEach((dot, i) => {
+            if (i === index) {
+                dot.classList.add('bg-opacity-80');
+                dot.classList.remove('bg-opacity-50');
+            } else {
+                dot.classList.remove('bg-opacity-80');
+                dot.classList.add('bg-opacity-50');
+            }
+        });
+        
+        currentSlide = index;
     }
     
-    // Auto slide every 5 seconds
-    setInterval(nextSlide, 5000);
+    // Next slide
+    function nextSlide() {
+        const nextIndex = (currentSlide + 1) % slides.length;
+        showSlide(nextIndex);
+    }
+    
+    // Previous slide
+    function prevSlide() {
+        const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(prevIndex);
+    }
+    
+    // Start auto slide
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, 5000);
+    }
+    
+    // Stop auto slide
+    function stopAutoSlide() {
+        if (autoSlideInterval) {
+            clearInterval(autoSlideInterval);
+        }
+    }
+    
+    // Event listeners
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            stopAutoSlide();
+            startAutoSlide();
+        });
+    }
+    
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            stopAutoSlide();
+            startAutoSlide();
+        });
+    }
+    
+    // Dot navigation
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showSlide(index);
+            stopAutoSlide();
+            startAutoSlide();
+        });
+    });
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            prevSlide();
+            stopAutoSlide();
+            startAutoSlide();
+        } else if (e.key === 'ArrowRight') {
+            nextSlide();
+            stopAutoSlide();
+            startAutoSlide();
+        }
+    });
+    
+    // Pause auto slide on hover
+    const heroSection = document.querySelector('section');
+    if (heroSection) {
+        heroSection.addEventListener('mouseenter', stopAutoSlide);
+        heroSection.addEventListener('mouseleave', startAutoSlide);
+    }
+    
+    // Initialize
+    showSlide(0);
+    startAutoSlide();
 }
 
 // Smooth Scrolling for Navigation Links
