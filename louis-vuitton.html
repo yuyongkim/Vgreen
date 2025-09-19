@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louis Vuitton Partnership - V_Green | 루이비통 VIP 이벤트 포트폴리오</title>
+    <meta name="description" content="루이비통 명품관에서 진행된 V_Green 홍지선 작가의 VIP 캐리커쳐 이벤트. 총 12회, 회당 8시간의 프리미엄 서비스로 고객 만족도 만점 달성.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .louis-vuitton-gradient {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #B8860B 100%);
+        }
+        .lv-gold {
+            color: #D4AF37;
+        }
+        .lv-brown {
+            color: #8B4513;
+        }
+        .comparison-card {
+            transition: all 0.3s ease;
+        }
+        .comparison-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+
+<body class="font-inter">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-green-600">
+                    <a href="index.html">V_Green</a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about.html" class="text-gray-700 hover:text-green-600 transition">About</a>
+                    
+                    <!-- Works Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-green-600 transition flex items-center space-x-1">
+                            <span>Works</span>
+                            <i class="fas fa-chevron-down text-sm transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-2xl shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="p-2">
+                                <a href="works-fine-art.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl hover:bg-green-50 transition group">
+                                    <div class="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center group-hover:bg-amber-200 transition">
+                                        <i class="fas fa-palette text-amber-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-800">Fine Art</div>
+                                        <div class="text-sm text-gray-500">유화 & 아크릴화</div>
+                                    </div>
+                                </a>
+                                <a href="works-caricature.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl hover:bg-green-50 transition group">
+                                    <div class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-purple-200 transition">
+                                        <i class="fas fa-magic text-purple-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-800">Caricature</div>
+                                        <div class="text-sm text-gray-500">라이브 & 스튜디오</div>
+                                    </div>
+                                </a>
+                                <a href="works-calligraphy.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl hover:bg-green-50 transition group">
+                                    <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-200 transition">
+                                        <i class="fas fa-pen-nib text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-800">Calligraphy</div>
+                                        <div class="text-sm text-gray-500">전통 & 현대</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="services.html" class="text-gray-700 hover:text-green-600 transition">Services</a>
+                    <a href="exhibition.html" class="text-gray-700 hover:text-green-600 transition">Exhibition</a>
+                    <a href="#" class="lv-gold font-semibold">Louis Vuitton</a>
+                    <a href="contact.html" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition">Contact</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-700 hover:text-green-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-2 px-6">
+                    <a href="about.html" class="text-gray-700 hover:text-green-600 transition py-2">About</a>
+                    
+                    <!-- Mobile Works Menu -->
+                    <div class="py-2">
+                        <button class="flex items-center justify-between w-full text-gray-700 hover:text-green-600 transition" id="mobile-works-toggle">
+                            <span>Works</span>
+                            <i class="fas fa-chevron-down text-sm transition-transform" id="mobile-works-icon"></i>
+                        </button>
+                        <div class="ml-4 mt-2 space-y-2 hidden" id="mobile-works-menu">
+                            <a href="works-fine-art.html" class="flex items-center space-x-2 text-gray-500 hover:text-green-600 transition py-1">
+                                <i class="fas fa-palette text-amber-500 text-sm"></i>
+                                <span>Fine Art</span>
+                            </a>
+                            <a href="works-caricature.html" class="flex items-center space-x-2 text-gray-500 hover:text-green-600 transition py-1">
+                                <i class="fas fa-magic text-purple-500 text-sm"></i>
+                                <span>Caricature</span>
+                            </a>
+                            <a href="works-calligraphy.html" class="flex items-center space-x-2 text-gray-500 hover:text-green-600 transition py-1">
+                                <i class="fas fa-pen-nib text-blue-500 text-sm"></i>
+                                <span>Calligraphy</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="services.html" class="text-gray-700 hover:text-green-600 transition py-2">Services</a>
+                    <a href="exhibition.html" class="text-gray-700 hover:text-green-600 transition py-2">Exhibition</a>
+                    <a href="#" class="lv-gold font-semibold py-2">Louis Vuitton</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-green-600 transition py-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center louis-vuitton-gradient">
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div class="relative z-10 text-center px-6 max-w-5xl mx-auto text-white">
+            <div class="mb-8">
+                <div class="inline-flex items-center space-x-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-8 py-4 mb-6">
+                    <i class="fas fa-crown text-3xl text-yellow-300"></i>
+                    <span class="text-xl font-bold">Official Louis Vuitton Partnership</span>
+                </div>
+            </div>
+            <h1 class="text-4xl md:text-7xl font-bold mb-6 leading-tight">
+                Louis Vuitton<br>
+                <span class="text-yellow-300">VIP Event Portfolio</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 leading-relaxed opacity-90">
+                루이비통 명품관에서 진행된 프리미엄 반려동물 캐리커쳐 이벤트<br>
+                <strong class="text-yellow-300">총 12회 × 8시간</strong>의 완벽한 서비스로 <strong class="text-yellow-300">고객 만족도 100% 달성</strong>
+            </p>
+            
+            <!-- Event Stats -->
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-6">
+                    <div class="text-3xl font-bold text-yellow-300 mb-2">12회</div>
+                    <div class="text-sm opacity-90">총 이벤트 횟수</div>
+                </div>
+                <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-6">
+                    <div class="text-3xl font-bold text-yellow-300 mb-2">96시간</div>
+                    <div class="text-sm opacity-90">총 서비스 시간</div>
+                </div>
+                <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-6">
+                    <div class="text-3xl font-bold text-yellow-300 mb-2">100%</div>
+                    <div class="text-sm opacity-90">고객 만족도</div>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#portfolio" class="bg-yellow-500 text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 transition transform hover:scale-105">
+                    포트폴리오 보기
+                </a>
+                <a href="#event-details" class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition">
+                    이벤트 상세보기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Overview -->
+    <section id="event-details" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="lv-gold font-semibold tracking-wider uppercase text-sm">Premium Experience</span>
+                <h2 class="text-3xl md:text-4xl font-bold lv-brown mt-2 mb-6">
+                    루이비통과의 특별한 파트너십
+                </h2>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                    글로벌 럭셔리 브랜드 루이비통의 VIP 고객들을 위한 독점 캐리커쳐 이벤트를 
+                    성공적으로 진행하며 최고 수준의 서비스를 제공했습니다.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto mb-16">
+                <!-- Event Details -->
+                <div class="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-3xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 louis-vuitton-gradient rounded-2xl flex items-center justify-center mr-4">
+                            <i class="fas fa-calendar-check text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold lv-brown">이벤트 개요</h3>
+                            <p class="lv-gold font-semibold">Premium Service Details</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-map-marker-alt lv-gold text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold lv-brown mb-1">장소</h4>
+                                <p class="text-gray-700">루이비통 명품관 VIP 라운지</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-clock lv-gold text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold lv-brown mb-1">서비스 시간</h4>
+                                <p class="text-gray-700">회당 8시간 × 총 12회 = 96시간</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-users lv-gold text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold lv-brown mb-1">고객층</h4>
+                                <p class="text-gray-700">루이비통 VIP 고객 및 가족</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-palette lv-gold text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold lv-brown mb-1">서비스 내용</h4>
+                                <p class="text-gray-700">현장 접수 및 반려동물 라이브 캐리커쳐</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievement -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center mr-4">
+                            <i class="fas fa-trophy text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800">성과 & 성취</h3>
+                            <p class="text-green-600 font-semibold">Outstanding Results</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-xl p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-semibold text-gray-800">고객 만족도</span>
+                                <span class="text-2xl font-bold text-green-600">100%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full w-full"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-semibold text-gray-800">재방문 요청</span>
+                                <span class="text-2xl font-bold text-green-600">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full w-[95%]"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-4">
+                            <h4 class="font-bold text-gray-800 mb-2">특별 성과</h4>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• 추가 요청 문의 대폭 증가</li>
+                                <li>• 브랜드 이미지 향상 기여</li>
+                                <li>• VIP 고객 충성도 증진</li>
+                                <li>• 루이비통 공식 파트너 선정</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dedication Message -->
+            <div class="max-w-4xl mx-auto bg-gradient-to-r from-amber-50 to-yellow-50 rounded-3xl p-8 md:p-12 border-2 border-yellow-200">
+                <div class="text-center">
+                    <i class="fas fa-heart text-4xl lv-gold mb-6"></i>
+                    <h3 class="text-2xl md:text-3xl font-bold lv-brown mb-6">
+                        "책임감과 열정으로 완성한 프리미엄 서비스"
+                    </h3>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        매 회차마다 8시간씩 진행되는 장시간 이벤트에도 불구하고, 
+                        <strong class="lv-brown">집에 돌아와서도 충실히 작업을 수행</strong>하여 
+                        모든 VIP 고객분들께 완벽한 작품을 전달해드렸습니다.
+                    </p>
+                    <div class="inline-flex items-center space-x-2 bg-white rounded-full px-6 py-3 border-2 border-yellow-300">
+                        <i class="fas fa-medal lv-gold"></i>
+                        <span class="font-bold lv-brown">고객 만족도 만점 달성</span>
+                        <i class="fas fa-star lv-gold"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="lv-gold font-semibold tracking-wider uppercase text-sm">Portfolio</span>
+                <h2 class="text-3xl md:text-4xl font-bold lv-brown mt-2 mb-6">
+                    루이비통 VIP 이벤트 작품들
+                </h2>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                    강아지의 크기와 특징에 맞춰 사진 사이즈를 세심하게 조정하여 
+                    최적의 비교 효과를 연출한 Before & After 포트폴리오입니다.
+                </p>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+                <!-- Portfolio Item 1 - Large Dog -->
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold lv-brown">골든 리트리버 "맥스"</h3>
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">대형견</span>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <!-- Before -->
+                            <div class="relative">
+                                <div class="aspect-square bg-gray-200 rounded-2xl overflow-hidden">
+                                    <!-- Placeholder for actual photo - adjust size for large dog -->
+                                    <div class="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+                                        <div class="text-center text-blue-600">
+                                            <i class="fas fa-camera text-4xl mb-2"></i>
+                                            <p class="font-semibold">원본 사진</p>
+                                            <p class="text-sm">Large Size Photo</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                    Before
+                                </div>
+                            </div>
+                            
+                            <!-- After -->
+                            <div class="relative">
+                                <div class="aspect-square bg-gray-200 rounded-2xl overflow-hidden">
+                                    <!-- Placeholder for caricature - same size as photo -->
+                                    <div class="w-full h-full bg-gradient-to-br from-amber-100 to-yellow-200 flex items-center justify-center">
+                                        <div class="text-center text-amber-700">
+                                            <i class="fas fa-magic text-4xl mb-2"></i>
+                                            <p class="font-semibold">캐리커쳐</p>
+                                            <p class="text-sm">Live Drawing</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-yellow-500 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
+                                    After
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 p-4 bg-amber-50 rounded-xl">
+                            <p class="text-sm text-amber-800">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                <strong>크기 조정 포인트:</strong> 대형견의 당당한 체격과 표정을 살려 정사각형 비율로 균형감 있게 구성
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 - Small Dog -->
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold lv-brown">푸들 "루루"</h3>
+                            <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-semibold">소형견</span>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <!-- Before -->
+                            <div class="relative">
+                                <div class="aspect-[3/4] bg-gray-200 rounded-2xl overflow-hidden">
+                                    <!-- Placeholder for small dog photo - taller aspect ratio -->
+                                    <div class="w-full h-full bg-gradient-to-br from-pink-100 to-rose-200 flex items-center justify-center">
+                                        <div class="text-center text-pink-600">
+                                            <i class="fas fa-camera text-3xl mb-2"></i>
+                                            <p class="font-semibold">원본 사진</p>
+                                            <p class="text-xs">Vertical Crop</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                    Before
+                                </div>
+                            </div>
+                            
+                            <!-- After -->
+                            <div class="relative">
+                                <div class="aspect-[3/4] bg-gray-200 rounded-2xl overflow-hidden">
+                                    <!-- Placeholder for caricature - same aspect ratio -->
+                                    <div class="w-full h-full bg-gradient-to-br from-purple-100 to-pink-200 flex items-center justify-center">
+                                        <div class="text-center text-purple-700">
+                                            <i class="fas fa-magic text-3xl mb-2"></i>
+                                            <p class="font-semibold">캐리커쳐</p>
+                                            <p class="text-xs">Live Drawing</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-yellow-500 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
+                                    After
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 p-4 bg-pink-50 rounded-xl">
+                            <p class="text-sm text-pink-800">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                <strong>크기 조정 포인트:</strong> 소형견의 귀여운 비율을 살려 세로 비율을 늘려 더욱 앙증맞게 표현
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 - Medium Dog -->
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold lv-brown">시바견 "하나"</h3>
+                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">중형견</span>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <!-- Before -->
+                            <div class="relative">
+                                <div class="aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden">
+                                    <!-- Placeholder for medium dog photo - landscape ratio -->
+                                    <div class="w-full h-full bg-gradient-to-br from-orange-100 to-amber-200 flex items-center justify-center">
+                                        <div class="text-center text-orange-600">
+                                            <i class="fas fa-camera text-4xl mb-2"></i>
+                                            <p class="font-semibold">원본 사진</p>
+                                            <p class="text-sm">Landscape Crop</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                    Before
+                                </div>
+                            </div>
+                            
+                            <!-- After -->
+                            <div class="relative">
+                                <div class="aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden">
+                                    <!-- Placeholder for caricature - same aspect ratio -->
+                                    <div class="w-full h-full bg-gradient-to-br from-red-100 to-orange-200 flex items-center justify-center">
+                                        <div class="text-center text-red-700">
+                                            <i class="fas fa-magic text-4xl mb-2"></i>
+                                            <p class="font-semibold">캐리커쳐</p>
+                                            <p class="text-sm">Live Drawing</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-yellow-500 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
+                                    After
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 p-4 bg-orange-50 rounded-xl">
+                            <p class="text-sm text-orange-800">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                <strong>크기 조정 포인트:</strong> 시바견의 특징적인 옆모습을 강조하여 가로 비율을 늘려 안정감 있게 구성
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 - Cat -->
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold lv-brown">페르시안 고양이 "프린세스"</h3>
+                            <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">고양이</span>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <!-- Before -->
+                            <div class="relative">
+                                <div class="aspect-[5/4] bg-gray-200 rounded-2xl overflow-hidden">
+                                    <!-- Placeholder for cat photo - slightly wide ratio -->
+                                    <div class="w-full h-full bg-gradient-to-br from-gray-100 to-slate-200 flex items-center justify-center">
+                                        <div class="text-center text-gray-600">
+                                            <i class="fas fa-camera text-4xl mb-2"></i>
+                                            <p class="font-semibold">원본 사진</p>
+                                            <p class="text-sm">Wide Portrait</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                    Before
+                                </div>
+                            </div>
+                            
+                            <!-- After -->
+                            <div class="relative">
+                                <div class="aspect-[5/4] bg-gray-200 rounded-2xl overflow-hidden">
+                                    <!-- Placeholder for caricature - same aspect ratio -->
+                                    <div class="w-full h-full bg-gradient-to-br from-indigo-100 to-purple-200 flex items-center justify-center">
+                                        <div class="text-center text-indigo-700">
+                                            <i class="fas fa-magic text-4xl mb-2"></i>
+                                            <p class="font-semibold">캐리커쳐</p>
+                                            <p class="text-sm">Live Drawing</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-yellow-500 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
+                                    After
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 p-4 bg-gray-50 rounded-xl">
+                            <p class="text-sm text-gray-700">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                <strong>크기 조정 포인트:</strong> 고양이의 우아한 포즈와 긴 털의 볼륨감을 고려하여 약간 넓은 비율로 조정
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 - Louis Vuitton Work 1 -->
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold lv-brown">루이비통 작품 1</h3>
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                루이비통 컬렉션
+                            </span>
+                        </div>
+                        <p class="text-gray-600 mb-6">루이비통 브랜드와 함께한 특별한 작품</p>
+                        
+                        <!-- Before & After Comparison -->
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="text-center">
+                                <img src="louis_vuitton_images/louis_vuitton_page_1_image_1.jpg" alt="원본 사진" class="w-full h-48 object-cover rounded-2xl mb-2">
+                                <p class="text-xs text-gray-500">원본 사진</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="louis_vuitton_images/louis_vuitton_page_1_image_1.jpg" alt="완성 작품" class="w-full h-48 object-cover rounded-2xl mb-2">
+                                <p class="text-xs text-gray-500">완성 작품</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm text-gray-600">
+                            <span>브랜드: Louis Vuitton</span>
+                            <span>품질: 프리미엄</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 - Louis Vuitton Work 2 -->
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold lv-brown">루이비통 작품 2</h3>
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                루이비통 컬렉션
+                            </span>
+                        </div>
+                        <p class="text-gray-600 mb-6">루이비통 브랜드와 함께한 특별한 작품</p>
+                        
+                        <!-- Before & After Comparison -->
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="text-center">
+                                <img src="louis_vuitton_images/louis_vuitton_page_2_image_1.jpg" alt="원본 사진" class="w-full h-48 object-cover rounded-2xl mb-2">
+                                <p class="text-xs text-gray-500">원본 사진</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="louis_vuitton_images/louis_vuitton_page_2_image_2.jpg" alt="완성 작품" class="w-full h-48 object-cover rounded-2xl mb-2">
+                                <p class="text-xs text-gray-500">완성 작품</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm text-gray-600">
+                            <span>브랜드: Louis Vuitton</span>
+                            <span>품질: 프리미엄</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 7 - Louis Vuitton Work 3 -->
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold lv-brown">루이비통 작품 3</h3>
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                루이비통 컬렉션
+                            </span>
+                        </div>
+                        <p class="text-gray-600 mb-6">루이비통 브랜드와 함께한 특별한 작품</p>
+                        
+                        <!-- Before & After Comparison -->
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="text-center">
+                                <img src="louis_vuitton_images/louis_vuitton_page_3_image_1.jpg" alt="원본 사진" class="w-full h-48 object-cover rounded-2xl mb-2">
+                                <p class="text-xs text-gray-500">원본 사진</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="louis_vuitton_images/louis_vuitton_page_3_image_2.jpg" alt="완성 작품" class="w-full h-48 object-cover rounded-2xl mb-2">
+                                <p class="text-xs text-gray-500">완성 작품</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm text-gray-600">
+                            <span>브랜드: Louis Vuitton</span>
+                            <span>품질: 프리미엄</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 8 - Louis Vuitton Work 4 -->
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold lv-brown">루이비통 작품 4</h3>
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                루이비통 컬렉션
+                            </span>
+                        </div>
+                        <p class="text-gray-600 mb-6">루이비통 브랜드와 함께한 특별한 작품</p>
+                        
+                        <!-- Before & After Comparison -->
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="text-center">
+                                <img src="louis_vuitton_images/louis_vuitton_page_4_image_1.jpg" alt="원본 사진" class="w-full h-48 object-cover rounded-2xl mb-2">
+                                <p class="text-xs text-gray-500">원본 사진</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="louis_vuitton_images/louis_vuitton_page_4_image_2.jpg" alt="완성 작품" class="w-full h-48 object-cover rounded-2xl mb-2">
+                                <p class="text-xs text-gray-500">완성 작품</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm text-gray-600">
+                            <span>브랜드: Louis Vuitton</span>
+                            <span>품질: 프리미엄</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 9 - Louis Vuitton Work 5 -->
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold lv-brown">루이비통 작품 5</h3>
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                루이비통 컬렉션
+                            </span>
+                        </div>
+                        <p class="text-gray-600 mb-6">루이비통 브랜드와 함께한 특별한 작품</p>
+                        
+                        <!-- Before & After Comparison -->
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="text-center">
+                                <img src="louis_vuitton_images/louis_vuitton_page_5_image_1.jpg" alt="원본 사진" class="w-full h-48 object-cover rounded-2xl mb-2">
+                                <p class="text-xs text-gray-500">원본 사진</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="louis_vuitton_images/louis_vuitton_page_5_image_2.jpg" alt="완성 작품" class="w-full h-48 object-cover rounded-2xl mb-2">
+                                <p class="text-xs text-gray-500">완성 작품</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm text-gray-600">
+                            <span>브랜드: Louis Vuitton</span>
+                            <span>품질: 프리미엄</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 10 - Louis Vuitton Work 6 -->
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold lv-brown">루이비통 작품 6</h3>
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                루이비통 컬렉션
+                            </span>
+                        </div>
+                        <p class="text-gray-600 mb-6">루이비통 브랜드와 함께한 특별한 작품</p>
+                        
+                        <!-- Before & After Comparison -->
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="text-center">
+                                <img src="louis_vuitton_images/louis_vuitton_page_6_image_1.jpg" alt="원본 사진" class="w-full h-48 object-cover rounded-2xl mb-2">
+                                <p class="text-xs text-gray-500">원본 사진</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="louis_vuitton_images/louis_vuitton_page_6_image_2.jpg" alt="완성 작품" class="w-full h-48 object-cover rounded-2xl mb-2">
+                                <p class="text-xs text-gray-500">완성 작품</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm text-gray-600">
+                            <span>브랜드: Louis Vuitton</span>
+                            <span>품질: 프리미엄</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Portfolio Note -->
+            <div class="max-w-4xl mx-auto mt-16 bg-gradient-to-r from-yellow-50 to-amber-50 rounded-3xl p-8 border-2 border-yellow-200">
+                <div class="text-center">
+                    <i class="fas fa-lightbulb text-3xl lv-gold mb-4"></i>
+                    <h3 class="text-2xl font-bold lv-brown mb-4">포트폴리오 특징</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        단순히 사진 크기만 맞추는 것이 아닌, <strong class="lv-brown">각 반려동물의 체형과 특성에 맞춰 
+                        최적의 화면 비율을 선택</strong>하여 Before & After 비교 효과를 극대화했습니다. 
+                        이는 루이비통 VIP 고객들에게 더욱 만족스러운 결과물을 제공하는 V_Green만의 
+                        <strong class="lv-gold">프리미엄 서비스 차별화</strong> 포인트입니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Excellence -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="lv-gold font-semibold tracking-wider uppercase text-sm">Excellence</span>
+                <h2 class="text-3xl md:text-4xl font-bold lv-brown mt-2 mb-6">
+                    프리미엄 서비스의 차별점
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <!-- Excellence 1 -->
+                <div class="text-center p-6 bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl">
+                    <div class="w-16 h-16 louis-vuitton-gradient rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold lv-brown mb-2">96시간 서비스</h3>
+                    <p class="text-sm text-gray-600">회당 8시간씩 총 12회에 걸친 장기간 프로젝트 완주</p>
+                </div>
+
+                <!-- Excellence 2 -->
+                <div class="text-center p-6 bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl">
+                    <div class="w-16 h-16 louis-vuitton-gradient rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold lv-brown mb-2">책임감과 열정</h3>
+                    <p class="text-sm text-gray-600">집에서도 추가 작업을 통한 완벽한 퀄리티 보장</p>
+                </div>
+
+                <!-- Excellence 3 -->
+                <div class="text-center p-6 bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl">
+                    <div class="w-16 h-16 louis-vuitton-gradient rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-crown text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold lv-brown mb-2">VIP 맞춤 서비스</h3>
+                    <p class="text-sm text-gray-600">루이비통 브랜드 가치에 부합하는 프리미엄 퀄리티</p>
+                </div>
+
+                <!-- Excellence 4 -->
+                <div class="text-center p-6 bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl">
+                    <div class="w-16 h-16 louis-vuitton-gradient rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-thumbs-up text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold lv-brown mb-2">100% 만족도</h3>
+                    <p class="text-sm text-gray-600">모든 VIP 고객의 완전한 만족과 재요청</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 louis-vuitton-gradient text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                루이비통이 인정한 프리미엄 품질
+            </h2>
+            <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                글로벌 럭셔리 브랜드와의 성공적인 파트너십으로 검증된 
+                V_Green의 프리미엄 서비스를 경험해보세요
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-yellow-500 text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 transition transform hover:scale-105">
+                    프리미엄 서비스 문의
+                </a>
+                <a href="exhibition.html" class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition">
+                    전체 수상 이력 보기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="text-3xl font-bold text-white mb-4">V_Green</div>
+                <p class="mb-6">홍지선 작가의 전문 펜트 포트레이트</p>
+                
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://instagram.com/v_green_art" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="https://blog.naver.com/v_green_blog" class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-blog text-2xl"></i>
+                    </a>
+                    <a href="tel:010-4430-4679" class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-phone text-2xl"></i>
+                    </a>
+                </div>
+                
+                <div class="text-sm">
+                    <p>&copy; 2024 V_Green. All rights reserved.</p>
+                    <p class="mt-2 lv-gold">Official Louis Vuitton Partnership • Premium Pet Portrait Service</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -40,6 +40,31 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Hero Section Responsive Image Ratios */
+.hero-slide img {
+    /* Mobile: Full cover for portrait images */
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Desktop: Better aspect ratio for landscape screens */
+@media (min-width: 768px) {
+    .hero-slide img {
+        object-fit: cover;
+        object-position: center top;
+        /* Adjust for better desktop viewing */
+        transform: scale(1.05);
+    }
+}
+
+/* Large Desktop: Optimize for wide screens */
+@media (min-width: 1024px) {
+    .hero-slide img {
+        object-position: center center;
+        transform: scale(1.02);
+    }
+}
+
 /* Navigation Styles */
 nav {
     transition: all 0.3s ease;
