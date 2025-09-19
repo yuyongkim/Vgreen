@@ -92,6 +92,57 @@ html {
     height: 100%;
 }
 
+/* 이미지 편집 도구 스타일 */
+.image-editor-tools {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.group:hover .image-editor-tools {
+    opacity: 1;
+}
+
+.image-editor-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.image-editor-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+/* 이미지 모달 스타일 */
+.image-modal {
+    backdrop-filter: blur(4px);
+}
+
+.image-modal img {
+    transition: transform 0.3s ease;
+}
+
+/* 이미지 회전 애니메이션 */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.rotating {
+    animation: rotate 0.3s ease-in-out;
+}
+
 /* Navigation Styles */
 nav {
     transition: all 0.3s ease;

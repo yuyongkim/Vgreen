@@ -547,11 +547,37 @@
                         <!-- Before & After Comparison -->
                         <div class="grid grid-cols-2 gap-2 mb-4">
                             <div class="text-center">
-                                <img src="louis_vuitton_images/louis_vuitton_page_1_image_1.jpg" alt="원본 사진" class="w-full h-32 dog-portrait-img rounded-xl mb-1">
+                                <div class="relative group">
+                                    <img src="louis_vuitton_images/louis_vuitton_page_1_image_1.jpg" alt="원본 사진" class="w-full h-32 dog-portrait-img rounded-xl mb-1 cursor-pointer" onclick="openImageModal(this.src, '원본 사진')">
+                                    <!-- 편집 도구 -->
+                                    <div class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <div class="flex space-x-1">
+                                            <button class="bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-700 p-1 rounded-full shadow-lg" onclick="rotateImage(this)" title="회전">
+                                                <i class="fas fa-redo text-xs"></i>
+                                            </button>
+                                            <button class="bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-700 p-1 rounded-full shadow-lg" onclick="zoomImage(this)" title="확대/축소">
+                                                <i class="fas fa-search-plus text-xs"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                                 <p class="text-xs text-gray-500">원본</p>
                             </div>
                             <div class="text-center">
-                                <img src="louis_vuitton_images/louis_vuitton_page_1_image_1.jpg" alt="완성 작품" class="w-full h-32 dog-portrait-img rounded-xl mb-1">
+                                <div class="relative group">
+                                    <img src="louis_vuitton_images/louis_vuitton_page_1_image_1.jpg" alt="완성 작품" class="w-full h-32 dog-portrait-img rounded-xl mb-1 cursor-pointer" onclick="openImageModal(this.src, '완성 작품')" style="transform: rotate(90deg);">
+                                    <!-- 편집 도구 -->
+                                    <div class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <div class="flex space-x-1">
+                                            <button class="bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-700 p-1 rounded-full shadow-lg" onclick="rotateImage(this)" title="회전">
+                                                <i class="fas fa-redo text-xs"></i>
+                                            </button>
+                                            <button class="bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-700 p-1 rounded-full shadow-lg" onclick="zoomImage(this)" title="확대/축소">
+                                                <i class="fas fa-search-plus text-xs"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                                 <p class="text-xs text-gray-500">작품</p>
                             </div>
                         </div>
@@ -577,11 +603,37 @@
                         <!-- Before & After Comparison -->
                         <div class="grid grid-cols-2 gap-2 mb-4">
                             <div class="text-center">
-                                <img src="louis_vuitton_images/louis_vuitton_page_2_image_1.jpg" alt="원본 사진" class="w-full h-32 object-cover rounded-xl mb-1">
+                                <div class="relative group">
+                                    <img src="louis_vuitton_images/louis_vuitton_page_2_image_1.jpg" alt="원본 사진" class="w-full h-32 dog-portrait-img rounded-xl mb-1 cursor-pointer" onclick="openImageModal(this.src, '원본 사진')">
+                                    <!-- 편집 도구 -->
+                                    <div class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <div class="flex space-x-1">
+                                            <button class="bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-700 p-1 rounded-full shadow-lg" onclick="rotateImage(this)" title="회전">
+                                                <i class="fas fa-redo text-xs"></i>
+                                            </button>
+                                            <button class="bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-700 p-1 rounded-full shadow-lg" onclick="zoomImage(this)" title="확대/축소">
+                                                <i class="fas fa-search-plus text-xs"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                                 <p class="text-xs text-gray-500">원본</p>
                             </div>
                             <div class="text-center">
-                                <img src="louis_vuitton_images/louis_vuitton_page_2_image_2.jpg" alt="완성 작품" class="w-full h-32 object-cover rounded-xl mb-1">
+                                <div class="relative group">
+                                    <img src="louis_vuitton_images/louis_vuitton_page_2_image_2.jpg" alt="완성 작품" class="w-full h-32 dog-portrait-img rounded-xl mb-1 cursor-pointer" onclick="openImageModal(this.src, '완성 작품')" style="transform: rotate(90deg);">
+                                    <!-- 편집 도구 -->
+                                    <div class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <div class="flex space-x-1">
+                                            <button class="bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-700 p-1 rounded-full shadow-lg" onclick="rotateImage(this)" title="회전">
+                                                <i class="fas fa-redo text-xs"></i>
+                                            </button>
+                                            <button class="bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-700 p-1 rounded-full shadow-lg" onclick="zoomImage(this)" title="확대/축소">
+                                                <i class="fas fa-search-plus text-xs"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                                 <p class="text-xs text-gray-500">작품</p>
                             </div>
                         </div>
@@ -726,11 +778,25 @@
                         <!-- Before & After Comparison -->
                         <div class="grid grid-cols-2 gap-2 mb-3">
                             <div class="text-center">
-                                <img src="louis_vuitton_images/louis_vuitton_page_7_image_1.jpg" alt="원본 사진" class="w-full h-24 object-cover rounded-lg mb-1">
+                                <div class="relative group">
+                                    <img src="louis_vuitton_images/louis_vuitton_page_7_image_1.jpg" alt="원본 사진" class="w-full h-24 dog-portrait-img rounded-lg mb-1 cursor-pointer" onclick="openImageModal(this.src, '원본 사진')">
+                                    <div class="absolute top-1 right-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <button class="bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-700 p-1 rounded-full shadow-lg" onclick="rotateImage(this)" title="회전">
+                                            <i class="fas fa-redo text-xs"></i>
+                                        </button>
+                                    </div>
+                                </div>
                                 <p class="text-xs text-gray-500">원본</p>
                             </div>
                             <div class="text-center">
-                                <img src="louis_vuitton_images/louis_vuitton_page_7_image_2.jpg" alt="완성 작품" class="w-full h-24 object-cover rounded-lg mb-1">
+                                <div class="relative group">
+                                    <img src="louis_vuitton_images/louis_vuitton_page_7_image_2.jpg" alt="완성 작품" class="w-full h-24 dog-portrait-img rounded-lg mb-1 cursor-pointer" onclick="openImageModal(this.src, '완성 작품')" style="transform: rotate(90deg);">
+                                    <div class="absolute top-1 right-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <button class="bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-700 p-1 rounded-full shadow-lg" onclick="rotateImage(this)" title="회전">
+                                            <i class="fas fa-redo text-xs"></i>
+                                        </button>
+                                    </div>
+                                </div>
                                 <p class="text-xs text-gray-500">작품</p>
                             </div>
                         </div>
@@ -1053,5 +1119,98 @@
     </footer>
 
     <script src="js/main.js"></script>
+    
+    <!-- Image Editor Scripts -->
+    <script>
+        // 이미지 모달 열기
+        function openImageModal(src, title) {
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50';
+            modal.innerHTML = `
+                <div class="bg-white rounded-2xl p-6 max-w-4xl max-h-[90vh] overflow-auto">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold">${title}</h3>
+                        <button onclick="this.closest('.fixed').remove()" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    <div class="relative">
+                        <img src="${src}" alt="${title}" class="max-w-full max-h-[70vh] object-contain rounded-lg" id="modalImage">
+                        <div class="absolute top-4 right-4 flex space-x-2">
+                            <button onclick="rotateModalImage()" class="bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-700 p-2 rounded-full shadow-lg" title="회전">
+                                <i class="fas fa-redo"></i>
+                            </button>
+                            <button onclick="zoomModalImage()" class="bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-700 p-2 rounded-full shadow-lg" title="확대/축소">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button onclick="resetModalImage()" class="bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-700 p-2 rounded-full shadow-lg" title="초기화">
+                                <i class="fas fa-undo"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        // 이미지 회전
+        function rotateImage(button) {
+            const img = button.closest('.group').querySelector('img');
+            const currentRotation = img.style.transform.match(/rotate\((\d+)deg\)/) ? 
+                parseInt(img.style.transform.match(/rotate\((\d+)deg\)/)[1]) : 0;
+            const newRotation = (currentRotation + 90) % 360;
+            img.style.transform = `rotate(${newRotation}deg)`;
+            img.style.transition = 'transform 0.3s ease';
+        }
+
+        // 이미지 확대/축소
+        function zoomImage(button) {
+            const img = button.closest('.group').querySelector('img');
+            const currentScale = img.style.transform.match(/scale\(([\d.]+)\)/) ? 
+                parseFloat(img.style.transform.match(/scale\(([\d.]+)\)/)[1]) : 1;
+            const newScale = currentScale === 1 ? 1.5 : 1;
+            const rotation = img.style.transform.match(/rotate\((\d+)deg\)/) ? 
+                img.style.transform.match(/rotate\((\d+)deg\)/)[0] : '';
+            img.style.transform = `${rotation} scale(${newScale})`;
+            img.style.transition = 'transform 0.3s ease';
+        }
+
+        // 모달 이미지 회전
+        function rotateModalImage() {
+            const img = document.getElementById('modalImage');
+            const currentRotation = img.style.transform.match(/rotate\((\d+)deg\)/) ? 
+                parseInt(img.style.transform.match(/rotate\((\d+)deg\)/)[1]) : 0;
+            const newRotation = (currentRotation + 90) % 360;
+            img.style.transform = `rotate(${newRotation}deg)`;
+            img.style.transition = 'transform 0.3s ease';
+        }
+
+        // 모달 이미지 확대/축소
+        function zoomModalImage() {
+            const img = document.getElementById('modalImage');
+            const currentScale = img.style.transform.match(/scale\(([\d.]+)\)/) ? 
+                parseFloat(img.style.transform.match(/scale\(([\d.]+)\)/)[1]) : 1;
+            const newScale = currentScale === 1 ? 1.5 : 1;
+            const rotation = img.style.transform.match(/rotate\((\d+)deg\)/) ? 
+                img.style.transform.match(/rotate\((\d+)deg\)/)[0] : '';
+            img.style.transform = `${rotation} scale(${newScale})`;
+            img.style.transition = 'transform 0.3s ease';
+        }
+
+        // 모달 이미지 초기화
+        function resetModalImage() {
+            const img = document.getElementById('modalImage');
+            img.style.transform = '';
+            img.style.transition = 'transform 0.3s ease';
+        }
+
+        // ESC 키로 모달 닫기
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const modal = document.querySelector('.fixed.inset-0');
+                if (modal) modal.remove();
+            }
+        });
+    </script>
 </body>
 </html>
