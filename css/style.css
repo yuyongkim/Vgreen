@@ -65,6 +65,33 @@ html {
     }
 }
 
+/* Louis Vuitton Portfolio Image Optimization */
+.louis-vuitton-img {
+    object-fit: cover;
+    object-position: center center;
+    transition: transform 0.3s ease;
+}
+
+.louis-vuitton-img:hover {
+    transform: scale(1.05);
+}
+
+/* 강아지 이미지 최적화 */
+.dog-portrait-img {
+    object-fit: cover;
+    object-position: center 30%;
+    width: 100%;
+    height: 100%;
+}
+
+/* 반려동물 초상화 이미지 최적화 */
+.pet-portrait-img {
+    object-fit: cover;
+    object-position: center 25%;
+    width: 100%;
+    height: 100%;
+}
+
 /* Navigation Styles */
 nav {
     transition: all 0.3s ease;
