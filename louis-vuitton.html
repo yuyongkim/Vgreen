@@ -319,51 +319,40 @@
                 </p>
             </div>
 
-            <!-- Portfolio Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            <!-- Portfolio Grid with Scroll Animation -->
+            <div class="space-y-16 max-w-4xl mx-auto">
                 <!-- Portfolio Item 1 - Large Dog -->
-                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold lv-brown">골든 리트리버 "맥스"</h3>
-                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">대형견</span>
+                <div class="scroll-reveal bg-white rounded-3xl overflow-hidden shadow-lg">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-2xl font-bold lv-brown">골든 리트리버 "맥스"</h3>
+                            <span class="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-sm font-semibold">대형견</span>
                         </div>
                         
-                        <div class="grid md:grid-cols-2 gap-4">
-                            <!-- Before -->
-                            <div class="relative group">
-                                <img src="louis_vuitton_images/louis_vuitton_page_1_image_1.jpg" alt="골든 리트리버 원본" class="aspect-square w-full object-cover rounded-2xl cursor-pointer" onclick="openImageModal(this.src, '골든 리트리버 원본')">
-                                <div class="absolute top-3 left-3 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                    Before
-                                </div>
-                                <!-- 클릭 안내 -->
-                                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 rounded-2xl flex items-center justify-center">
-                                    <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div class="bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-xs font-semibold">
-                                            <i class="fas fa-search-plus mr-1"></i>클릭하여 크게 보기
-                                        </div>
+                        <!-- Before/After Interactive Container -->
+                        <div class="before-after-container h-96 rounded-2xl overflow-hidden cursor-pointer" onclick="openImageModal(this.querySelector('.after-image').src, '골든 리트리버 작품')">
+                            <img src="louis_vuitton_images/louis_vuitton_page_1_image_1.jpg" alt="골든 리트리버 원본" class="before-image">
+                            <img src="louis_vuitton_images/louis_vuitton_page_1_image_2.jpg" alt="골든 리트리버 캐리커쳐" class="after-image" style="transform: rotate(90deg);">
+                            
+                            <!-- 호버 안내 -->
+                            <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-all duration-300 rounded-2xl flex items-center justify-center">
+                                <div class="opacity-0 hover:opacity-100 transition-opacity duration-300">
+                                    <div class="bg-white bg-opacity-90 text-gray-800 px-4 py-2 rounded-full text-sm font-semibold">
+                                        <i class="fas fa-mouse mr-2"></i>호버하여 Before/After 보기
                                     </div>
                                 </div>
                             </div>
                             
-                            <!-- After -->
-                            <div class="relative group">
-                                <img src="louis_vuitton_images/louis_vuitton_page_1_image_2.jpg" alt="골든 리트리버 캐리커쳐" class="aspect-square w-full object-cover rounded-2xl cursor-pointer" onclick="openImageModal(this.src, '골든 리트리버 캐리커쳐')" style="transform: rotate(90deg);">
-                                <div class="absolute top-3 left-3 bg-yellow-500 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
-                                    After
-                                </div>
-                                <!-- 클릭 안내 -->
-                                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 rounded-2xl flex items-center justify-center">
-                                    <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div class="bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-xs font-semibold">
-                                            <i class="fas fa-search-plus mr-1"></i>클릭하여 크게 보기
-                                        </div>
-                                    </div>
-                                </div>
+                            <!-- Before/After 라벨 -->
+                            <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
+                                Before
+                            </div>
+                            <div class="absolute top-4 right-4 bg-yellow-500 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold z-10">
+                                After
                             </div>
                         </div>
                         
-                        <div class="mt-4 p-4 bg-amber-50 rounded-xl">
+                        <div class="mt-6 p-4 bg-amber-50 rounded-xl">
                             <p class="text-sm text-amber-800">
                                 <i class="fas fa-info-circle mr-2"></i>
                                 <strong>크기 조정 포인트:</strong> 대형견의 당당한 체격과 표정을 살려 정사각형 비율로 균형감 있게 구성
@@ -373,48 +362,37 @@
                 </div>
 
                 <!-- Portfolio Item 2 - Small Dog -->
-                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold lv-brown">푸들 "루루"</h3>
-                            <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-semibold">소형견</span>
+                <div class="scroll-reveal bg-white rounded-3xl overflow-hidden shadow-lg">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-2xl font-bold lv-brown">푸들 "루루"</h3>
+                            <span class="bg-pink-100 text-pink-800 px-4 py-2 rounded-full text-sm font-semibold">소형견</span>
                         </div>
                         
-                        <div class="grid md:grid-cols-2 gap-4">
-                            <!-- Before -->
-                            <div class="relative group">
-                                <img src="louis_vuitton_images/louis_vuitton_page_2_image_1.jpg" alt="푸들 원본" class="aspect-[3/4] w-full object-cover rounded-2xl cursor-pointer" onclick="openImageModal(this.src, '푸들 원본')">
-                                <div class="absolute top-3 left-3 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                    Before
-                                </div>
-                                <!-- 클릭 안내 -->
-                                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 rounded-2xl flex items-center justify-center">
-                                    <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div class="bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-xs font-semibold">
-                                            <i class="fas fa-search-plus mr-1"></i>클릭하여 크게 보기
-                                        </div>
+                        <!-- Before/After Interactive Container -->
+                        <div class="before-after-container h-96 rounded-2xl overflow-hidden cursor-pointer" onclick="openImageModal(this.querySelector('.after-image').src, '푸들 작품')">
+                            <img src="louis_vuitton_images/louis_vuitton_page_2_image_1.jpg" alt="푸들 원본" class="before-image">
+                            <img src="louis_vuitton_images/louis_vuitton_page_2_image_2.jpg" alt="푸들 캐리커쳐" class="after-image" style="transform: rotate(90deg);">
+                            
+                            <!-- 호버 안내 -->
+                            <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-all duration-300 rounded-2xl flex items-center justify-center">
+                                <div class="opacity-0 hover:opacity-100 transition-opacity duration-300">
+                                    <div class="bg-white bg-opacity-90 text-gray-800 px-4 py-2 rounded-full text-sm font-semibold">
+                                        <i class="fas fa-mouse mr-2"></i>호버하여 Before/After 보기
                                     </div>
                                 </div>
                             </div>
                             
-                            <!-- After -->
-                            <div class="relative group">
-                                <img src="louis_vuitton_images/louis_vuitton_page_2_image_2.jpg" alt="푸들 캐리커쳐" class="aspect-[3/4] w-full object-cover rounded-2xl cursor-pointer" onclick="openImageModal(this.src, '푸들 캐리커쳐')" style="transform: rotate(90deg);">
-                                <div class="absolute top-3 left-3 bg-yellow-500 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
-                                    After
-                                </div>
-                                <!-- 클릭 안내 -->
-                                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 rounded-2xl flex items-center justify-center">
-                                    <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div class="bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-xs font-semibold">
-                                            <i class="fas fa-search-plus mr-1"></i>클릭하여 크게 보기
-                                        </div>
-                                    </div>
-                                </div>
+                            <!-- Before/After 라벨 -->
+                            <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
+                                Before
+                            </div>
+                            <div class="absolute top-4 right-4 bg-yellow-500 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold z-10">
+                                After
                             </div>
                         </div>
                         
-                        <div class="mt-4 p-4 bg-pink-50 rounded-xl">
+                        <div class="mt-6 p-4 bg-pink-50 rounded-xl">
                             <p class="text-sm text-pink-800">
                                 <i class="fas fa-info-circle mr-2"></i>
                                 <strong>크기 조정 포인트:</strong> 소형견의 귀여운 비율을 살려 세로 비율을 늘려 더욱 앙증맞게 표현
@@ -1305,6 +1283,40 @@
                 });
             }
         });
+
+        // 스크롤 애니메이션 초기화
+        function initScrollAnimations() {
+            const scrollElements = document.querySelectorAll('.scroll-reveal');
+            const scrollProgress = document.createElement('div');
+            scrollProgress.className = 'scroll-progress';
+            document.body.appendChild(scrollProgress);
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            scrollElements.forEach(el => {
+                observer.observe(el);
+            });
+
+            // 스크롤 진행률 표시
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset;
+                const docHeight = document.body.offsetHeight - window.innerHeight;
+                const scrollPercent = scrollTop / docHeight;
+                scrollProgress.style.transform = `scaleX(${scrollPercent})`;
+            });
+        }
+
+        // 페이지 로드 시 스크롤 애니메이션 초기화
+        document.addEventListener('DOMContentLoaded', initScrollAnimations);
     </script>
 </body>
 </html>

@@ -143,6 +143,70 @@ html {
     animation: rotate 0.3s ease-in-out;
 }
 
+/* 스크롤 애니메이션 효과 */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 스크롤 기반 Before/After 애니메이션 */
+.before-after-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.before-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease-out;
+    z-index: 2;
+}
+
+.after-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translateX(-100%);
+    transition: transform 0.8s ease-out;
+    z-index: 1;
+}
+
+.before-after-container:hover .before-image {
+    transform: translateX(100%);
+}
+
+.before-after-container:hover .after-image {
+    transform: translateX(0);
+}
+
+/* 스크롤 진행 표시 */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #f59e0b, #10b981);
+    transform-origin: left;
+    transform: scaleX(0);
+    z-index: 1000;
+    transition: transform 0.1s ease-out;
+}
+
 /* Navigation Styles */
 nav {
     transition: all 0.3s ease;
