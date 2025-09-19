@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="홍지선 작가 상세 프로필 - 생명과학자에서 반려동물 초상화 전문 작가로의 여정과 다양한 활동 이력">
+    <meta name="keywords" content="홍지선 작가, 반려동물 초상화, 캐리커쳐, 전시 이력, 작가 프로필">
+    <title>About | 홍지선 작가 - V_Green</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-green-600">
+                    <a href="index.html">V_Green</a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-green-600 font-semibold">About</a>
+                    
+                    <!-- Works Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-green-600 transition flex items-center space-x-1">
+                            <span>Works</span>
+                            <i class="fas fa-chevron-down text-sm transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-2xl shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="p-2">
+                                <a href="works-fine-art.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl hover:bg-green-50 transition group">
+                                    <div class="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center group-hover:bg-amber-200 transition">
+                                        <i class="fas fa-palette text-amber-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-800">Fine Art</div>
+                                        <div class="text-sm text-gray-500">유화 & 아크릴화</div>
+                                    </div>
+                                </a>
+                                <a href="works-caricature.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl hover:bg-green-50 transition group">
+                                    <div class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-purple-200 transition">
+                                        <i class="fas fa-magic text-purple-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-800">Caricature</div>
+                                        <div class="text-sm text-gray-500">라이브 & 스튜디오</div>
+                                    </div>
+                                </a>
+                                <a href="works-calligraphy.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl hover:bg-green-50 transition group">
+                                    <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-200 transition">
+                                        <i class="fas fa-pen-nib text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-800">Calligraphy</div>
+                                        <div class="text-sm text-gray-500">전통 & 현대</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="services.html" class="text-gray-700 hover:text-green-600 transition">Services</a>
+                    <a href="exhibition.html" class="text-gray-700 hover:text-green-600 transition">Exhibition</a>
+                    <a href="contact.html" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition">Contact</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-700 hover:text-green-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-2 px-6">
+                    <a href="#" class="text-green-600 font-semibold py-2">About</a>
+                    
+                    <!-- Mobile Works Menu -->
+                    <div class="py-2">
+                        <button class="flex items-center justify-between w-full text-gray-700 hover:text-green-600 transition" id="mobile-works-toggle">
+                            <span>Works</span>
+                            <i class="fas fa-chevron-down text-sm transition-transform" id="mobile-works-icon"></i>
+                        </button>
+                        <div class="ml-4 mt-2 space-y-2 hidden" id="mobile-works-menu">
+                            <a href="works-fine-art.html" class="flex items-center space-x-2 text-gray-500 hover:text-green-600 transition py-1">
+                                <i class="fas fa-palette text-amber-500 text-sm"></i>
+                                <span>Fine Art</span>
+                            </a>
+                            <a href="works-caricature.html" class="flex items-center space-x-2 text-gray-500 hover:text-green-600 transition py-1">
+                                <i class="fas fa-magic text-purple-500 text-sm"></i>
+                                <span>Caricature</span>
+                            </a>
+                            <a href="works-calligraphy.html" class="flex items-center space-x-2 text-gray-500 hover:text-green-600 transition py-1">
+                                <i class="fas fa-pen-nib text-blue-500 text-sm"></i>
+                                <span>Calligraphy</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="services.html" class="text-gray-700 hover:text-green-600 transition py-2">Services</a>
+                    <a href="exhibition.html" class="text-gray-700 hover:text-green-600 transition py-2">Exhibition</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-green-600 transition py-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-b from-green-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
+                    <span class="text-green-700">홍지선</span> 작가
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    생명과학자의 정밀함과 아티스트의 감성으로<br>
+                    반려동물의 특별한 순간을 영원히 간직합니다
+                </p>
+                <div class="mt-8 w-24 h-1 bg-green-600 mx-auto"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artist Profile Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+                <div class="order-2 lg:order-1">
+                    <div class="mb-8">
+                        <span class="text-green-600 font-semibold tracking-wider uppercase text-sm">Artist Profile</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">
+                            과학자에서 아티스트로
+                        </h2>
+                    </div>
+                    
+                    <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+                        <p>
+                            <strong class="text-gray-800">서울대학교 생명과학과 석사</strong> 학위를 취득한 후, 
+                            생명체의 본질을 탐구하던 과학자에서 반려동물의 감정과 영혼을 
+                            캔버스에 담아내는 전문 아티스트로 전향했습니다.
+                        </p>
+                        
+                        <p>
+                            과학적 관찰력을 바탕으로 반려동물의 세밀한 특징과 개성을 포착하며, 
+                            예술적 감성을 통해 그들만의 고유한 이야기를 작품에 녹여냅니다.
+                        </p>
+                        
+                        <div class="bg-green-50 p-6 rounded-xl border-l-4 border-green-500 my-8">
+                            <h4 class="font-semibold text-green-800 mb-3">작가 철학</h4>
+                            <p class="text-green-700 italic leading-relaxed">
+                                "단순히 그리는 것을 넘어, 생명의 본질을 이해하고 교감합니다. 
+                                각각의 반려동물이 가진 고유한 영혼과 감정을 과학적 정밀함으로 관찰하고, 
+                                예술적 감성으로 표현하는 것이 제 작업의 핵심입니다."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="order-1 lg:order-2">
+                    <div class="artist-profile-image">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/c965e012c32e3176a025cd45a95f73c4" 
+                             alt="홍지선 작가 작업 모습" 
+                             class="rounded-3xl shadow-2xl w-full">
+                        <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl">
+                            <div class="text-3xl text-green-600 mb-2">
+                                <i class="fas fa-microscope"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 font-medium">Scientific Precision<br>meets Artistic Vision</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Areas -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-green-600 font-semibold tracking-wider uppercase text-sm">Expertise</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">
+                    전문 분야
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    다양한 기법과 스타일로 반려동물의 개성을 표현합니다
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- 초정밀 유화 -->
+                <div class="expertise-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-palette text-2xl text-amber-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">초정밀 유화</h3>
+                        <p class="text-gray-600 text-sm">Oil Painting</p>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-3 text-sm"></i>
+                            <span>사실적 털 질감 표현</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-3 text-sm"></i>
+                            <span>생동감 있는 눈빛 묘사</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-3 text-sm"></i>
+                            <span>개성과 감정 표현</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-3 text-sm"></i>
+                            <span>50×70cm 대형 캔버스</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 간단 수채화 -->
+                <div class="expertise-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-paint-brush text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">간단 수채화</h3>
+                        <p class="text-gray-600 text-sm">Watercolor</p>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-3 text-sm"></i>
+                            <span>부드러운 색채 조화</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-3 text-sm"></i>
+                            <span>자연스러운 번짐 효과</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-3 text-sm"></i>
+                            <span>따뜻한 감성 표현</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-3 text-sm"></i>
+                            <span>A4~A3 다양한 사이즈</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 캐리커쳐 -->
+                <div class="expertise-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-smile text-2xl text-rose-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">캐리커쳐</h3>
+                        <p class="text-gray-600 text-sm">Caricature</p>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-3 text-sm"></i>
+                            <span>특징적 요소 강조</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-3 text-sm"></i>
+                            <span>유머러스한 표현</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-3 text-sm"></i>
+                            <span>라이브 드로잉 가능</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-3 text-sm"></i>
+                            <span>이벤트 및 체험 행사</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event & Activity Experience -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-green-600 font-semibold tracking-wider uppercase text-sm">Activities</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">
+                    캐리커쳐 이벤트 & 활동
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    다양한 현장에서 고객과 직접 만나 소통하며 작품을 선보입니다
+                </p>
+            </div>
+            
+            <!-- 이벤트 활동 갤러리 - PPT 내용 기반으로 추후 이미지 추가 -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+                <!-- 캐리커쳐 이벤트 플레이스홀더들 - PPT 사진으로 교체 예정 -->
+                <div class="activity-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 bg-gray-200 overflow-hidden">
+                        <img src="images/placeholder-outdoor-event.jpg" alt="홍지선 작가가 야외에서 군부대 차량을 배경으로 캐리커쳐 작업을 하는 모습" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-semibold text-gray-800 mb-2">야외 이벤트 활동</h4>
+                        <p class="text-gray-600 text-sm">다양한 현장에서의 라이브 캐리커쳐 서비스</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 bg-gray-200 overflow-hidden">
+                        <img src="images/placeholder-work-table.jpg" alt="홍지선 작가가 작업 테이블에서 캐리커쳐 작업 중인 모습과 야외 이벤트 부스 설치" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-semibold text-gray-800 mb-2">현장 이벤트 부스</h4>
+                        <p class="text-gray-600 text-sm">체계적인 부스 운영과 전문적인 작업 환경 제공</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 bg-gray-200 overflow-hidden">
+                        <img src="images/placeholder-workshop.jpg" alt="실내 워크숍에서 참가자들과 함께하는 캐리커쳐 수업 현장" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-semibold text-gray-800 mb-2">워크숍 & 클래스</h4>
+                        <p class="text-gray-600 text-sm">실내 교육 프로그램과 참가자 맞춤 지도</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 활동 하이라이트 -->
+            <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-3xl p-8 md:p-12">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">라이브 드로잉 전문가</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fas fa-clock text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">빠른 작업 속도</h4>
+                                    <p class="text-gray-600 text-sm">현장에서 15-20분 내 완성</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fas fa-heart text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">고객 소통</h4>
+                                    <p class="text-gray-600 text-sm">작업 과정을 함께 즐기는 인터랙션</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fas fa-star text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">특별한 기념품</h4>
+                                    <p class="text-gray-600 text-sm">이벤트의 특별한 추억으로 간직</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="inline-block p-8 bg-white rounded-2xl shadow-lg">
+                            <i class="fas fa-pencil-alt text-6xl text-green-600 mb-4"></i>
+                            <p class="text-2xl font-bold text-gray-800 mb-2">500+</p>
+                            <p class="text-gray-600">라이브 캐리커쳐 경험</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Recognition -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-green-600 font-semibold tracking-wider uppercase text-sm">Recognition</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">
+                    인정받는 전문성
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-crown text-3xl text-amber-600"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">루이비통</h4>
+                    <p class="text-gray-600">VIP 고객 이벤트 공식 아티스트</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-certificate text-3xl text-blue-600"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">서울대 석사</h4>
+                    <p class="text-gray-600">생명과학과 전문 학위</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-3xl text-green-600"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">지역 문화</h4>
+                    <p class="text-gray-600">다수 지자체 공식 행사 참여</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                당신의 반려동물도 특별한 작품이 될 수 있습니다
+            </h2>
+            <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                과학적 정밀함과 예술적 감성으로 우리 아이만의 특별한 이야기를 그려드립니다
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#contact" class="bg-white text-green-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition transform hover:scale-105">
+                    작품 의뢰하기
+                </a>
+                <a href="portfolio.html" class="border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-full font-semibold transition">
+                    포트폴리오 보기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="text-3xl font-bold text-white mb-4">
+                    <span class="text-green-400">V</span>_Green
+                </div>
+                <p class="mb-6">홍지선 작가의 반려동물 초상화 브랜드</p>
+                
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://www.instagram.com/soul_yule_art?igsh=emVma2Y3YWQ1Mmln" target="_blank" class="text-gray-400 hover:text-green-400 text-2xl transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://open.kakao.com/me/soulyuleart" target="_blank" class="text-gray-400 hover:text-green-400 text-2xl transition">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://linktr.ee/soulyuleart?utm_source=linktree_profile_share&ltsid=8acaf295-e1c7-4b47-992b-47f235e6753f" target="_blank" class="text-gray-400 hover:text-green-400 text-2xl transition">
+                        <i class="fas fa-link"></i>
+                    </a>
+                </div>
+                
+                <div class="border-t border-gray-800 pt-8">
+                    <p class="text-sm">
+                        © 2024 V_Green by 홍지선. All rights reserved. | 
+                        서울대학교 생명과학과 석사 출신 반려동물 초상화 전문 작가
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

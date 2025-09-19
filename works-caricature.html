@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caricature Portfolio - V_Green | 홍지선 캐리커쳐 작품</title>
+    <meta name="description" content="홍지선 작가의 전문 캐리커쳐 포트폴리오. 라이브 드로잉부터 이벤트 서비스까지, 생생한 캐릭터 표현의 전문가.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="font-inter">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-green-600">
+                    <a href="index.html">V_Green</a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about.html" class="text-gray-700 hover:text-green-600 transition">About</a>
+                    
+                    <!-- Works Dropdown -->
+                    <div class="relative group">
+                        <button class="text-green-600 font-semibold flex items-center space-x-1">
+                            <span>Works</span>
+                            <i class="fas fa-chevron-down text-sm transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-2xl shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="p-2">
+                                <a href="works-fine-art.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl hover:bg-green-50 transition group">
+                                    <div class="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center group-hover:bg-amber-200 transition">
+                                        <i class="fas fa-palette text-amber-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-800">Fine Art</div>
+                                        <div class="text-sm text-gray-500">유화 & 아크릴화</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-green-50 group">
+                                    <div class="w-10 h-10 bg-purple-200 rounded-xl flex items-center justify-center">
+                                        <i class="fas fa-magic text-purple-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-green-600">Caricature</div>
+                                        <div class="text-sm text-gray-500">라이브 & 스튜디오</div>
+                                    </div>
+                                </a>
+                                <a href="works-calligraphy.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl hover:bg-green-50 transition group">
+                                    <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-200 transition">
+                                        <i class="fas fa-pen-nib text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-800">Calligraphy</div>
+                                        <div class="text-sm text-gray-500">전통 & 현대</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="services.html" class="text-gray-700 hover:text-green-600 transition">Services</a>
+                    <a href="exhibition.html" class="text-gray-700 hover:text-green-600 transition">Exhibition</a>
+                    <a href="contact.html" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition">Contact</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-700 hover:text-green-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-2 px-6">
+                    <a href="about.html" class="text-gray-700 hover:text-green-600 transition py-2">About</a>
+                    
+                    <!-- Mobile Works Menu -->
+                    <div class="py-2">
+                        <button class="flex items-center justify-between w-full text-green-600 font-semibold transition" id="mobile-works-toggle">
+                            <span>Works</span>
+                            <i class="fas fa-chevron-down text-sm transition-transform" id="mobile-works-icon"></i>
+                        </button>
+                        <div class="ml-4 mt-2 space-y-2 hidden" id="mobile-works-menu">
+                            <a href="works-fine-art.html" class="flex items-center space-x-2 text-gray-500 hover:text-green-600 transition py-1">
+                                <i class="fas fa-palette text-amber-500 text-sm"></i>
+                                <span>Fine Art</span>
+                            </a>
+                            <a href="#" class="flex items-center space-x-2 text-green-600 font-semibold py-1">
+                                <i class="fas fa-magic text-purple-500 text-sm"></i>
+                                <span>Caricature</span>
+                            </a>
+                            <a href="works-calligraphy.html" class="flex items-center space-x-2 text-gray-500 hover:text-green-600 transition py-1">
+                                <i class="fas fa-pen-nib text-blue-500 text-sm"></i>
+                                <span>Calligraphy</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="services.html" class="text-gray-700 hover:text-green-600 transition py-2">Services</a>
+                    <a href="exhibition.html" class="text-gray-700 hover:text-green-600 transition py-2">Exhibition</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-green-600 transition py-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-pink-50">
+        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+            <span class="inline-block px-4 py-2 bg-purple-600 text-white rounded-full text-sm font-semibold mb-6">
+                Live Caricature Artist
+            </span>
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
+                캐리커쳐
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
+                현장에서 펼쳐지는 생생한 라이브 드로잉<br>
+                특별한 순간을 유쾌한 캐리커쳐로 기억하세요
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#portfolio" class="bg-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-purple-700 transition transform hover:scale-105">
+                    캐리커쳐 갤러리
+                </a>
+                <a href="#services" class="border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-4 rounded-full font-semibold transition">
+                    이벤트 서비스
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-purple-600 font-semibold tracking-wider uppercase text-sm">Services</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">
+                    캐리커쳐 서비스
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    다양한 현장과 상황에 맞는 전문적인 캐리커쳐 서비스를 제공합니다
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <!-- Live Drawing -->
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8">
+                    <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-magic text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">라이브 드로잉</h3>
+                    <div class="space-y-4 text-gray-700">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-clock text-purple-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">빠른 완성</h4>
+                                <p class="text-sm">현장에서 15-20분 내 즉석 완성</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-smile text-purple-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">유쾌한 소통</h4>
+                                <p class="text-sm">그리는 과정도 하나의 즐거운 쇼</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-users text-purple-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">다양한 현장</h4>
+                                <p class="text-sm">결혼식, 파티, 기업 행사 등 모든 현장</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Studio Work -->
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8">
+                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-home text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">스튜디오 작업</h3>
+                    <div class="space-y-4 text-gray-700">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-gem text-blue-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">정교한 완성도</h4>
+                                <p class="text-sm">충분한 시간을 통한 세밀한 표현</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-palette text-blue-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">컬러 캐리커쳐</h4>
+                                <p class="text-sm">다채로운 색상의 고급 캐리커쳐</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-gift text-blue-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">선물용 제작</h4>
+                                <p class="text-sm">특별한 기념품과 맞춤 선물</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-purple-600 font-semibold tracking-wider uppercase text-sm">Portfolio</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">
+                    캐리커쳐 작품 갤러리
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    생생한 표현력으로 완성한 다양한 캐리커쳐 작품들을 만나보세요
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn active bg-purple-600 text-white px-6 py-3 rounded-full font-semibold transition hover:bg-purple-700" data-filter="all">
+                    전체 작품
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-semibold border border-gray-300 hover:border-purple-600 hover:text-purple-600 transition" data-filter="live">
+                    라이브 드로잉
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-semibold border border-gray-300 hover:border-purple-600 hover:text-purple-600 transition" data-filter="studio">
+                    스튜디오 작업
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-semibold border border-gray-300 hover:border-purple-600 hover:text-purple-600 transition" data-filter="event">
+                    이벤트
+                </button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="live event">
+                    <div class="relative overflow-hidden">
+                        <img src="images/caricature-live-1.jpg" alt="라이브 캐리커쳐 작업 현장" class="w-full h-80 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Live Drawing
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">기업 행사 라이브</h3>
+                        <p class="text-gray-600 mb-4">현장에서 즉석 완성하는 생동감</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-purple-600 font-semibold">15분 완성</span>
+                            <button class="text-gray-500 hover:text-purple-600 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="studio">
+                    <div class="relative overflow-hidden">
+                        <img src="images/caricature-studio-1.jpg" alt="스튜디오 컬러 캐리커쳐 작품" class="w-full h-80 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Studio Work
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">컬러 캐리커쳐</h3>
+                        <p class="text-gray-600 mb-4">정교한 컬러 작업의 완성도</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-purple-600 font-semibold">₩150,000</span>
+                            <button class="text-gray-500 hover:text-purple-600 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="event live">
+                    <div class="relative overflow-hidden">
+                        <img src="images/caricature-wedding.jpg" alt="웨딩 이벤트 캐리커쳐" class="w-full h-80 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Wedding Event
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">웨딩 캐리커쳐</h3>
+                        <p class="text-gray-600 mb-4">특별한 날의 행복한 순간</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-purple-600 font-semibold">커플 캐리커쳐</span>
+                            <button class="text-gray-500 hover:text-purple-600 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="studio">
+                    <div class="relative overflow-hidden">
+                        <img src="images/caricature-family.jpg" alt="가족 캐리커쳐 작품" class="w-full h-80 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Family Portrait
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">가족 캐리커쳐</h3>
+                        <p class="text-gray-600 mb-4">온 가족이 함께하는 따뜻함</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-purple-600 font-semibold">₩200,000</span>
+                            <button class="text-gray-500 hover:text-purple-600 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="live event">
+                    <div class="relative overflow-hidden">
+                        <img src="images/caricature-party.jpg" alt="파티 이벤트 캐리커쳐" class="w-full h-80 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Party Event
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">파티 캐리커쳐</h3>
+                        <p class="text-gray-600 mb-4">즐거운 분위기의 현장 그림</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-purple-600 font-semibold">현장 서비스</span>
+                            <button class="text-gray-500 hover:text-purple-600 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="studio">
+                    <div class="relative overflow-hidden">
+                        <img src="images/caricature-gift.jpg" alt="선물용 캐리커쳐 작품" class="w-full h-80 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Gift Art
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">선물용 캐리커쳐</h3>
+                        <p class="text-gray-600 mb-4">특별한 기념일의 맞춤 선물</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-purple-600 font-semibold">₩120,000</span>
+                            <button class="text-gray-500 hover:text-purple-600 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-purple-600 font-semibold tracking-wider uppercase text-sm">Experience</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">
+                    현장 경험 & 실적
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    다양한 현장에서 쌓은 풍부한 경험과 전문성을 보여드립니다
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <!-- Stat 1 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-magic text-3xl text-white"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-800 mb-2">500+</div>
+                    <p class="text-gray-600">라이브 드로잉 경험</p>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-3xl text-white"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-800 mb-2">200+</div>
+                    <p class="text-gray-600">웨딩 이벤트 참여</p>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-building text-3xl text-white"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-800 mb-2">50+</div>
+                    <p class="text-gray-600">기업 행사 협업</p>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-smile text-3xl text-white"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-800 mb-2">100%</div>
+                    <p class="text-gray-600">고객 만족도</p>
+                </div>
+            </div>
+
+            <!-- Event Types -->
+            <div class="mt-20">
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-12">참여 가능한 이벤트</h3>
+                <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-5xl mx-auto">
+                    <div class="text-center p-4 bg-gray-50 rounded-2xl">
+                        <i class="fas fa-ring text-2xl text-pink-600 mb-2"></i>
+                        <p class="font-semibold text-gray-800">웨딩</p>
+                    </div>
+                    <div class="text-center p-4 bg-gray-50 rounded-2xl">
+                        <i class="fas fa-birthday-cake text-2xl text-purple-600 mb-2"></i>
+                        <p class="font-semibold text-gray-800">생일파티</p>
+                    </div>
+                    <div class="text-center p-4 bg-gray-50 rounded-2xl">
+                        <i class="fas fa-building text-2xl text-blue-600 mb-2"></i>
+                        <p class="font-semibold text-gray-800">기업행사</p>
+                    </div>
+                    <div class="text-center p-4 bg-gray-50 rounded-2xl">
+                        <i class="fas fa-graduation-cap text-2xl text-green-600 mb-2"></i>
+                        <p class="font-semibold text-gray-800">졸업식</p>
+                    </div>
+                    <div class="text-center p-4 bg-gray-50 rounded-2xl">
+                        <i class="fas fa-users text-2xl text-orange-600 mb-2"></i>
+                        <p class="font-semibold text-gray-800">동창회</p>
+                    </div>
+                    <div class="text-center p-4 bg-gray-50 rounded-2xl">
+                        <i class="fas fa-star text-2xl text-red-600 mb-2"></i>
+                        <p class="font-semibold text-gray-800">기념일</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-purple-600 font-semibold tracking-wider uppercase text-sm">Pricing</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">
+                    캐리커쳐 가격 안내
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    서비스 유형과 작업 규모에 따른 합리적인 가격 체계입니다
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Live Drawing Pricing -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="text-center mb-8">
+                        <div class="w-20 h-20 bg-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-magic text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">라이브 드로잉</h3>
+                        <p class="text-gray-600">현장 이벤트 즉석 캐리커쳐</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-4 bg-gray-50 rounded-xl">
+                            <span class="font-semibold text-gray-700">2시간 패키지</span>
+                            <span class="text-xl font-bold text-purple-600">₩300,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-gray-50 rounded-xl">
+                            <span class="font-semibold text-gray-700">4시간 패키지</span>
+                            <span class="text-xl font-bold text-purple-600">₩500,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-gray-50 rounded-xl">
+                            <span class="font-semibold text-gray-700">전일 패키지</span>
+                            <span class="text-xl font-bold text-purple-600">₩800,000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-semibold text-gray-800 mb-3">포함 사항</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i> 현장 이동비 포함</li>
+                            <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i> 드로잉 재료 모두 제공</li>
+                            <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i> 완성작 즉시 전달</li>
+                            <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i> 개인당 15-20분 소요</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Studio Work Pricing -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="text-center mb-8">
+                        <div class="w-20 h-20 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-home text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">스튜디오 작업</h3>
+                        <p class="text-gray-600">정교한 컬러 캐리커쳐 작품</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-4 bg-gray-50 rounded-xl">
+                            <span class="font-semibold text-gray-700">개인 캐리커쳐</span>
+                            <span class="text-xl font-bold text-blue-600">₩120,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-gray-50 rounded-xl">
+                            <span class="font-semibold text-gray-700">커플 캐리커쳐</span>
+                            <span class="text-xl font-bold text-blue-600">₩180,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-gray-50 rounded-xl">
+                            <span class="font-semibold text-gray-700">가족 캐리커쳐 (4인)</span>
+                            <span class="text-xl font-bold text-blue-600">₩280,000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-semibold text-gray-800 mb-3">포함 사항</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i> 고해상도 디지털 파일</li>
+                            <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i> A4 사이즈 인쇄본</li>
+                            <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i> 작업 과정 스케치</li>
+                            <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i> 1주일 내 완성</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Options -->
+            <div class="max-w-3xl mx-auto mt-12 p-8 bg-gradient-to-r from-purple-50 to-pink-50 rounded-3xl">
+                <div class="text-center mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">추가 옵션 & 안내사항</h3>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6 text-sm">
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">추가 서비스</h4>
+                        <ul class="space-y-1 text-gray-600">
+                            <li>• 액자 제작: +₩30,000</li>
+                            <li>• 특급 제작 (3일): +50%</li>
+                            <li>• 대형 사이즈: 별도 견적</li>
+                            <li>• 배경 추가: +₩20,000</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">이벤트 안내</h4>
+                        <ul class="space-y-1 text-gray-600">
+                            <li>• 수도권 이동비 무료</li>
+                            <li>• 지방 출장 시 별도 협의</li>
+                            <li>• 최소 2주 전 예약 권장</li>
+                            <li>• 성수기 추가 요금 있음</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                특별한 순간을 유쾌한 캐리커쳐로 기념하세요
+            </h2>
+            <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                현장에서 펼쳐지는 생생한 라이브 드로잉부터 정교한 스튜디오 작업까지
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#contact" class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition transform hover:scale-105">
+                    이벤트 문의하기
+                </a>
+                <a href="about.html" class="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-full font-semibold transition">
+                    작가 소개 보기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="text-3xl font-bold text-white mb-4">V_Green</div>
+                <p class="mb-6">홍지선 작가의 전문 펜트 포트레이트</p>
+                
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://instagram.com/v_green_art" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="https://blog.naver.com/v_green_blog" class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-blog text-2xl"></i>
+                    </a>
+                    <a href="tel:010-4430-4679" class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-phone text-2xl"></i>
+                    </a>
+                </div>
+                
+                <div class="text-sm">
+                    <p>&copy; 2024 V_Green. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calligraphy Portfolio - V_Green | 홍지선 캘리그라피 작품</title>
+    <meta name="description" content="홍지선 작가의 전문 캘리그라피 포트폴리오. 전통 서예부터 현대적 캘리그라피까지, 붓글씨의 아름다움을 전하는 작품.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="font-inter">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-green-600">
+                    <a href="index.html">V_Green</a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about.html" class="text-gray-700 hover:text-green-600 transition">About</a>
+                    
+                    <!-- Works Dropdown -->
+                    <div class="relative group">
+                        <button class="text-green-600 font-semibold flex items-center space-x-1">
+                            <span>Works</span>
+                            <i class="fas fa-chevron-down text-sm transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-2xl shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="p-2">
+                                <a href="works-fine-art.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl hover:bg-green-50 transition group">
+                                    <div class="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center group-hover:bg-amber-200 transition">
+                                        <i class="fas fa-palette text-amber-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-800">Fine Art</div>
+                                        <div class="text-sm text-gray-500">유화 & 아크릴화</div>
+                                    </div>
+                                </a>
+                                <a href="works-caricature.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl hover:bg-green-50 transition group">
+                                    <div class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-purple-200 transition">
+                                        <i class="fas fa-magic text-purple-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-800">Caricature</div>
+                                        <div class="text-sm text-gray-500">라이브 & 스튜디오</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-green-50 group">
+                                    <div class="w-10 h-10 bg-blue-200 rounded-xl flex items-center justify-center">
+                                        <i class="fas fa-pen-nib text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-green-600">Calligraphy</div>
+                                        <div class="text-sm text-gray-500">전통 & 현대</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="services.html" class="text-gray-700 hover:text-green-600 transition">Services</a>
+                    <a href="exhibition.html" class="text-gray-700 hover:text-green-600 transition">Exhibition</a>
+                    <a href="contact.html" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition">Contact</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-700 hover:text-green-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-2 px-6">
+                    <a href="about.html" class="text-gray-700 hover:text-green-600 transition py-2">About</a>
+                    
+                    <!-- Mobile Works Menu -->
+                    <div class="py-2">
+                        <button class="flex items-center justify-between w-full text-green-600 font-semibold transition" id="mobile-works-toggle">
+                            <span>Works</span>
+                            <i class="fas fa-chevron-down text-sm transition-transform" id="mobile-works-icon"></i>
+                        </button>
+                        <div class="ml-4 mt-2 space-y-2 hidden" id="mobile-works-menu">
+                            <a href="works-fine-art.html" class="flex items-center space-x-2 text-gray-500 hover:text-green-600 transition py-1">
+                                <i class="fas fa-palette text-amber-500 text-sm"></i>
+                                <span>Fine Art</span>
+                            </a>
+                            <a href="works-caricature.html" class="flex items-center space-x-2 text-gray-500 hover:text-green-600 transition py-1">
+                                <i class="fas fa-magic text-purple-500 text-sm"></i>
+                                <span>Caricature</span>
+                            </a>
+                            <a href="#" class="flex items-center space-x-2 text-green-600 font-semibold py-1">
+                                <i class="fas fa-pen-nib text-blue-500 text-sm"></i>
+                                <span>Calligraphy</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="services.html" class="text-gray-700 hover:text-green-600 transition py-2">Services</a>
+                    <a href="exhibition.html" class="text-gray-700 hover:text-green-600 transition py-2">Exhibition</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-green-600 transition py-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-amber-50 to-orange-50">
+        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+            <span class="inline-block px-4 py-2 bg-amber-600 text-white rounded-full text-sm font-semibold mb-6">
+                Traditional & Modern Calligraphy
+            </span>
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
+                캘리그라피
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
+                전통 서예의 격조와 현대적 감각이 어우러진<br>
+                아름다운 붓글씨의 세계
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#portfolio" class="bg-amber-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-amber-700 transition transform hover:scale-105">
+                    작품 갤러리 보기
+                </a>
+                <a href="#styles" class="border-2 border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white px-8 py-4 rounded-full font-semibold transition">
+                    서체 스타일 보기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Styles Section -->
+    <section id="styles" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-amber-600 font-semibold tracking-wider uppercase text-sm">Styles</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">
+                    다양한 서체 스타일
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    전통 서예부터 현대적 캘리그라피까지 다양한 스타일로 표현합니다
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Traditional Style -->
+                <div class="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-3xl p-8 text-center">
+                    <div class="w-20 h-20 bg-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-brush text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">전통 서예</h3>
+                    <div class="space-y-4 text-gray-700">
+                        <div class="text-center">
+                            <h4 class="font-semibold mb-2">정자체 (楷書)</h4>
+                            <p class="text-sm">격조 높은 정통 서체의 품격</p>
+                        </div>
+                        <div class="text-center">
+                            <h4 class="font-semibold mb-2">행서체 (行書)</h4>
+                            <p class="text-sm">자연스러운 흐름의 아름다움</p>
+                        </div>
+                        <div class="text-center">
+                            <h4 class="font-semibold mb-2">초서체 (草書)</h4>
+                            <p class="text-sm">자유롭고 예술적인 표현</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modern Calligraphy -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 text-center">
+                    <div class="w-20 h-20 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-pen-nib text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">현대 캘리그라피</h3>
+                    <div class="space-y-4 text-gray-700">
+                        <div class="text-center">
+                            <h4 class="font-semibold mb-2">모던 스타일</h4>
+                            <p class="text-sm">세련되고 감각적인 현대 서체</p>
+                        </div>
+                        <div class="text-center">
+                            <h4 class="font-semibold mb-2">디자인 레터링</h4>
+                            <p class="text-sm">창의적이고 개성 있는 글자</p>
+                        </div>
+                        <div class="text-center">
+                            <h4 class="font-semibold mb-2">감성 캘리그라피</h4>
+                            <p class="text-sm">감정을 담은 따뜻한 글씨</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fusion Style -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 text-center">
+                    <div class="w-20 h-20 bg-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-palette text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">퓨전 스타일</h3>
+                    <div class="space-y-4 text-gray-700">
+                        <div class="text-center">
+                            <h4 class="font-semibold mb-2">한글 + 영문</h4>
+                            <p class="text-sm">동서양의 조화로운 만남</p>
+                        </div>
+                        <div class="text-center">
+                            <h4 class="font-semibold mb-2">일러스트 결합</h4>
+                            <p class="text-sm">그림과 글씨의 완벽한 조화</p>
+                        </div>
+                        <div class="text-center">
+                            <h4 class="font-semibold mb-2">컬러 캘리그라피</h4>
+                            <p class="text-sm">색채로 더욱 풍성한 표현</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-amber-600 font-semibold tracking-wider uppercase text-sm">Portfolio</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">
+                    캘리그라피 작품 갤러리
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    붓과 펜으로 쓴 아름다운 글씨의 다양한 모습들을 감상하세요
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn active bg-amber-600 text-white px-6 py-3 rounded-full font-semibold transition hover:bg-amber-700" data-filter="all">
+                    전체 작품
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-semibold border border-gray-300 hover:border-amber-600 hover:text-amber-600 transition" data-filter="traditional">
+                    전통 서예
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-semibold border border-gray-300 hover:border-amber-600 hover:text-amber-600 transition" data-filter="modern">
+                    현대 캘리그라피
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-semibold border border-gray-300 hover:border-amber-600 hover:text-amber-600 transition" data-filter="commercial">
+                    상업용 작품
+                </button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="traditional">
+                    <div class="relative overflow-hidden">
+                        <img src="images/calligraphy-traditional-1.jpg" alt="전통 서예 정자체 작품" class="w-full h-80 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Traditional
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">사군자 정자체</h3>
+                        <p class="text-gray-600 mb-4">매난국죽의 전통 서예 작품</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-amber-600 font-semibold">50cm × 70cm</span>
+                            <button class="text-gray-500 hover:text-amber-600 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="modern">
+                    <div class="relative overflow-hidden">
+                        <img src="images/calligraphy-modern-1.jpg" alt="현대 캘리그라피 작품" class="w-full h-80 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Modern
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">감성 캘리그라피</h3>
+                        <p class="text-gray-600 mb-4">"사랑한다는 말" 현대적 표현</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-amber-600 font-semibold">₩180,000</span>
+                            <button class="text-gray-500 hover:text-amber-600 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="commercial">
+                    <div class="relative overflow-hidden">
+                        <img src="images/calligraphy-wedding.jpg" alt="웨딩 캘리그라피 작품" class="w-full h-80 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Wedding
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">웨딩 청첩장</h3>
+                        <p class="text-gray-600 mb-4">신랑신부 이름 캘리그라피</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-amber-600 font-semibold">맞춤 제작</span>
+                            <button class="text-gray-500 hover:text-amber-600 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="traditional">
+                    <div class="relative overflow-hidden">
+                        <img src="images/calligraphy-poem.jpg" alt="시 캘리그라피 작품" class="w-full h-80 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Poetry
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">윤동주 시집</h3>
+                        <p class="text-gray-600 mb-4">"별 헤는 밤" 행서체 작품</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-amber-600 font-semibold">₩250,000</span>
+                            <button class="text-gray-500 hover:text-amber-600 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="commercial">
+                    <div class="relative overflow-hidden">
+                        <img src="images/calligraphy-brand.jpg" alt="브랜드 로고 캘리그라피" class="w-full h-80 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Branding
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">브랜드 로고</h3>
+                        <p class="text-gray-600 mb-4">한식당 간판 캘리그라피</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-amber-600 font-semibold">₩300,000</span>
+                            <button class="text-gray-500 hover:text-amber-600 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="modern">
+                    <div class="relative overflow-hidden">
+                        <img src="images/calligraphy-quote.jpg" alt="인생 명언 캘리그라피" class="w-full h-80 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Quote
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">인생 명언</h3>
+                        <p class="text-gray-600 mb-4">영감을 주는 글귀 작품</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-amber-600 font-semibold">₩150,000</span>
+                            <button class="text-gray-500 hover:text-amber-600 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-amber-600 font-semibold tracking-wider uppercase text-sm">Applications</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">
+                    캘리그라피 활용 분야
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    다양한 용도와 목적에 맞는 맞춤형 캘리그라피 서비스를 제공합니다
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <!-- Application 1 -->
+                <div class="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl">
+                    <div class="w-16 h-16 bg-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">웨딩</h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• 청첩장</li>
+                        <li>• 웰컴보드</li>
+                        <li>• 좌석 안내판</li>
+                        <li>• 감사 카드</li>
+                    </ul>
+                </div>
+
+                <!-- Application 2 -->
+                <div class="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-store text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">상업용</h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• 간판 & 로고</li>
+                        <li>• 메뉴판</li>
+                        <li>• 포스터</li>
+                        <li>• 패키징</li>
+                    </ul>
+                </div>
+
+                <!-- Application 3 -->
+                <div class="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl">
+                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-home text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">인테리어</h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• 액자 작품</li>
+                        <li>• 현판</li>
+                        <li>• 족자</li>
+                        <li>• 벽면 장식</li>
+                    </ul>
+                </div>
+
+                <!-- Application 4 -->
+                <div class="text-center p-6 bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl">
+                    <div class="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-gift text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">선물용</h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• 기념품</li>
+                        <li>• 상장 & 인증서</li>
+                        <li>• 명언 액자</li>
+                        <li>• 개인 맞춤</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Pet Portrait Integration Notice -->
+            <div class="mt-16 max-w-4xl mx-auto p-8 bg-gradient-to-r from-green-50 to-blue-50 rounded-3xl">
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                        <i class="fas fa-paw text-green-600 mr-2"></i>
+                        반려동물 초상화와의 특별한 만남
+                    </h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        반려동물의 이름이나 특별한 의미를 담은 문구를 초상화 작품에 함께 새겨드립니다. 
+                        유화나 아크릴화 작품의 배경이나 하단에 아름다운 캘리그라피를 추가하여 
+                        더욱 의미 있고 완성도 높은 작품으로 만들어보세요.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="works-fine-art.html" class="bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700 transition">
+                            초상화 + 캘리그라피 보기
+                        </a>
+                        <a href="#pricing" class="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-6 py-3 rounded-full font-semibold transition">
+                            조합 작품 가격 확인
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-amber-600 font-semibold tracking-wider uppercase text-sm">Pricing</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">
+                    캘리그라피 가격 안내
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    작품 크기와 복잡도에 따른 합리적인 가격 체계를 제공합니다
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="text-center mb-8">
+                        <div class="w-20 h-20 bg-gray-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-pen text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">베이직</h3>
+                        <p class="text-gray-600">단순한 글씨 위주의 작품</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-3 bg-gray-50 rounded-xl">
+                            <span class="text-gray-700">A4 사이즈</span>
+                            <span class="font-bold text-gray-800">₩80,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-gray-50 rounded-xl">
+                            <span class="text-gray-700">A3 사이즈</span>
+                            <span class="font-bold text-gray-800">₩120,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-gray-50 rounded-xl">
+                            <span class="text-gray-700">B3 사이즈</span>
+                            <span class="font-bold text-gray-800">₩150,000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check text-gray-600 mr-2"></i> 기본 서체 선택</li>
+                            <li class="flex items-center"><i class="fas fa-check text-gray-600 mr-2"></i> 흑백 작업</li>
+                            <li class="flex items-center"><i class="fas fa-check text-gray-600 mr-2"></i> 디지털 파일 제공</li>
+                            <li class="flex items-center"><i class="fas fa-check text-gray-600 mr-2"></i> 3일 내 완성</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Standard Plan -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg border-2 border-amber-600 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-amber-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                        인기
+                    </div>
+                    <div class="text-center mb-8">
+                        <div class="w-20 h-20 bg-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-brush text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">스탠다드</h3>
+                        <p class="text-gray-600">컬러와 장식 요소가 포함된 작품</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-3 bg-amber-50 rounded-xl">
+                            <span class="text-gray-700">A4 사이즈</span>
+                            <span class="font-bold text-amber-600">₩150,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-amber-50 rounded-xl">
+                            <span class="text-gray-700">A3 사이즈</span>
+                            <span class="font-bold text-amber-600">₩220,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-amber-50 rounded-xl">
+                            <span class="text-gray-700">B3 사이즈</span>
+                            <span class="font-bold text-amber-600">₩280,000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check text-amber-600 mr-2"></i> 다양한 서체 선택</li>
+                            <li class="flex items-center"><i class="fas fa-check text-amber-600 mr-2"></i> 컬러 작업</li>
+                            <li class="flex items-center"><i class="fas fa-check text-amber-600 mr-2"></i> 장식 요소 추가</li>
+                            <li class="flex items-center"><i class="fas fa-check text-amber-600 mr-2"></i> 고해상도 파일</li>
+                            <li class="flex items-center"><i class="fas fa-check text-amber-600 mr-2"></i> 5일 내 완성</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="text-center mb-8">
+                        <div class="w-20 h-20 bg-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-gem text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">프리미엄</h3>
+                        <p class="text-gray-600">일러스트와 복합 디자인 작품</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-3 bg-purple-50 rounded-xl">
+                            <span class="text-gray-700">A4 사이즈</span>
+                            <span class="font-bold text-purple-600">₩250,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-purple-50 rounded-xl">
+                            <span class="text-gray-700">A3 사이즈</span>
+                            <span class="font-bold text-purple-600">₩350,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-purple-50 rounded-xl">
+                            <span class="text-gray-700">B3 사이즈</span>
+                            <span class="font-bold text-purple-600">₩450,000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i> 맞춤형 서체 개발</li>
+                            <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i> 풀컬러 + 일러스트</li>
+                            <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i> 복합 디자인</li>
+                            <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i> 인쇄용 파일</li>
+                            <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i> 7일 내 완성</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Combinations -->
+            <div class="max-w-4xl mx-auto mt-12 p-8 bg-gradient-to-r from-green-50 to-emerald-50 rounded-3xl">
+                <div class="text-center mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">
+                        <i class="fas fa-paw text-green-600 mr-2"></i>
+                        초상화 + 캘리그라피 조합 작품
+                    </h3>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6 text-sm">
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">유화 + 캘리그라피</h4>
+                        <ul class="space-y-1 text-gray-600">
+                            <li>• 30cm × 40cm: +₩50,000</li>
+                            <li>• 40cm × 50cm: +₩70,000</li>
+                            <li>• 50cm × 60cm: +₩90,000</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">아크릴화 + 캘리그라피</h4>
+                        <ul class="space-y-1 text-gray-600">
+                            <li>• 30cm × 40cm: +₩40,000</li>
+                            <li>• 40cm × 50cm: +₩60,000</li>
+                            <li>• 50cm × 60cm: +₩80,000</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-amber-600 to-orange-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                특별한 의미를 담은 아름다운 글씨를 만나보세요
+            </h2>
+            <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                전통 서예의 품격과 현대적 감각이 어우러진 맞춤형 캘리그라피 작품
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#contact" class="bg-white text-amber-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition transform hover:scale-105">
+                    캘리그라피 의뢰하기
+                </a>
+                <a href="about.html" class="border-2 border-white text-white hover:bg-white hover:text-amber-600 px-8 py-4 rounded-full font-semibold transition">
+                    작가 소개 보기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="text-3xl font-bold text-white mb-4">V_Green</div>
+                <p class="mb-6">홍지선 작가의 전문 펜트 포트레이트</p>
+                
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://instagram.com/v_green_art" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="https://blog.naver.com/v_green_blog" class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-blog text-2xl"></i>
+                    </a>
+                    <a href="tel:010-4430-4679" class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-phone text-2xl"></i>
+                    </a>
+                </div>
+                
+                <div class="text-sm">
+                    <p>&copy; 2024 V_Green. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

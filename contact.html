@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - V_Green | 홍지선 작가 연락처 및 문의</title>
+    <meta name="description" content="V_Green 홍지선 작가에게 작품 의뢰하기. 반려동물 초상화, 캐리커쳐, 캘리그라피 등 모든 서비스 상담 및 견적 문의.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="font-inter">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-green-600">
+                    <a href="index.html">V_Green</a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-green-600 transition">Home</a>
+                    <a href="about.html" class="text-gray-700 hover:text-green-600 transition">About</a>
+                    <a href="services.html" class="text-gray-700 hover:text-green-600 transition">Services</a>
+                    <a href="exhibition.html" class="text-gray-700 hover:text-green-600 transition">Exhibition</a>
+                    <a href="#" class="text-green-600 font-semibold">Contact</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-700 hover:text-green-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-green-600 transition">Home</a>
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-green-600 transition">About</a>
+                <a href="services.html" class="block py-2 text-gray-700 hover:text-green-600 transition">Services</a>
+                <a href="exhibition.html" class="block py-2 text-gray-700 hover:text-green-600 transition">Exhibition</a>
+                <a href="#" class="block py-2 text-green-600 font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 to-green-50">
+        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+            <span class="inline-block px-4 py-2 bg-green-600 text-white rounded-full text-sm font-semibold mb-6">
+                Get In Touch
+            </span>
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
+                연락처 & 문의
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
+                우리 아이만의 특별한 작품을 위한<br>
+                상담과 견적을 받아보세요
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact-form" class="bg-green-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-green-700 transition transform hover:scale-105">
+                    온라인 문의하기
+                </a>
+                <a href="#contact-info" class="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-8 py-4 rounded-full font-semibold transition">
+                    연락처 확인하기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-green-600 font-semibold tracking-wider uppercase text-sm">Contact Methods</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">
+                    다양한 방법으로 문의하세요
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    편리한 방법으로 상담받고 맞춤 견적을 확인해보세요
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <!-- Phone -->
+                <div class="text-center group hover:shadow-lg rounded-3xl p-6 transition-shadow duration-300">
+                    <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-phone text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">전화 상담</h3>
+                    <p class="text-gray-600 mb-4">빠른 상담과 즉석 견적</p>
+                    <a href="tel:010-4430-4679" class="text-green-600 font-semibold hover:underline">
+                        010-4430-4679
+                    </a>
+                    <p class="text-sm text-gray-500 mt-2">평일 9시~18시</p>
+                </div>
+
+                <!-- Instagram -->
+                <div class="text-center group hover:shadow-lg rounded-3xl p-6 transition-shadow duration-300">
+                    <div class="w-20 h-20 bg-gradient-to-br from-pink-500 to-purple-600 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fab fa-instagram text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">인스타그램</h3>
+                    <p class="text-gray-600 mb-4">최신 작품과 DM 상담</p>
+                    <a href="https://instagram.com/v_green_art" target="_blank" class="text-pink-600 font-semibold hover:underline">
+                        @v_green_art
+                    </a>
+                    <p class="text-sm text-gray-500 mt-2">24시간 DM 가능</p>
+                </div>
+
+                <!-- Blog -->
+                <div class="text-center group hover:shadow-lg rounded-3xl p-6 transition-shadow duration-300">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-blog text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">네이버 블로그</h3>
+                    <p class="text-gray-600 mb-4">상세 작업 과정 확인</p>
+                    <a href="https://blog.naver.com/v_green_blog" target="_blank" class="text-blue-600 font-semibold hover:underline">
+                        V_Green 블로그
+                    </a>
+                    <p class="text-sm text-gray-500 mt-2">작품 후기 다수</p>
+                </div>
+
+                <!-- Online Form -->
+                <div class="text-center group hover:shadow-lg rounded-3xl p-6 transition-shadow duration-300">
+                    <div class="w-20 h-20 bg-gradient-to-br from-amber-500 to-orange-600 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-envelope text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">온라인 문의</h3>
+                    <p class="text-gray-600 mb-4">상세한 내용 전달</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsWakQHzPPMUsfa-ew7Kb0hEgAOlvWmXTx7uEp1QWFyTx7uEp1QWFyTgcJg/viewform" target="_blank" class="text-amber-600 font-semibold hover:underline">
+                        구글폼 문의하기
+                    </a>
+                    <p class="text-sm text-gray-500 mt-2">24시간 내 답변</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Info -->
+    <section id="contact-form" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="mb-8">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">온라인 문의하기</h2>
+                        <p class="text-gray-600">
+                            원하시는 서비스와 예산을 알려주시면, 24시간 내에 맞춤 견적을 보내드립니다.
+                        </p>
+                    </div>
+
+                    <form class="space-y-6" id="contactForm">
+                        <!-- Name & Phone -->
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">이름 *</label>
+                                <input type="text" id="name" name="name" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 transition">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">연락처 *</label>
+                                <input type="tel" id="phone" name="phone" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 transition"
+                                       placeholder="010-0000-0000">
+                            </div>
+                        </div>
+
+                        <!-- Service Type -->
+                        <div>
+                            <label for="service" class="block text-sm font-semibold text-gray-700 mb-2">희망 서비스 *</label>
+                            <select id="service" name="service" required 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 transition">
+                                <option value="">서비스를 선택해주세요</option>
+                                <option value="oil-painting">유화 작품</option>
+                                <option value="acrylic-painting">아크릴화 작품</option>
+                                <option value="live-caricature">라이브 캐리커쳐</option>
+                                <option value="studio-caricature">스튜디오 캐리커쳐</option>
+                                <option value="calligraphy">캘리그라피</option>
+                                <option value="combination">조합 작품 (초상화+캘리그라피)</option>
+                                <option value="wedding-event">웨딩 이벤트</option>
+                                <option value="corporate-event">기업 행사</option>
+                                <option value="other">기타</option>
+                            </select>
+                        </div>
+
+                        <!-- Pet Info -->
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="pet-type" class="block text-sm font-semibold text-gray-700 mb-2">반려동물 종류</label>
+                                <input type="text" id="pet-type" name="pet-type" 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 transition"
+                                       placeholder="예: 골든 리트리버, 페르시안 고양이">
+                            </div>
+                            <div>
+                                <label for="pet-name" class="block text-sm font-semibold text-gray-700 mb-2">반려동물 이름</label>
+                                <input type="text" id="pet-name" name="pet-name" 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 transition"
+                                       placeholder="우리 아이 이름">
+                            </div>
+                        </div>
+
+                        <!-- Canvas Size / Event Date -->
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="size" class="block text-sm font-semibold text-gray-700 mb-2">희망 사이즈/일시</label>
+                                <input type="text" id="size" name="size" 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 transition"
+                                       placeholder="예: 40x50cm 또는 2024.12.15">
+                            </div>
+                            <div>
+                                <label for="budget" class="block text-sm font-semibold text-gray-700 mb-2">예산 범위</label>
+                                <select id="budget" name="budget" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 transition">
+                                    <option value="">예산을 선택해주세요</option>
+                                    <option value="under-200">20만원 미만</option>
+                                    <option value="200-400">20만원 ~ 40만원</option>
+                                    <option value="400-600">40만원 ~ 60만원</option>
+                                    <option value="600-800">60만원 ~ 80만원</option>
+                                    <option value="over-800">80만원 이상</option>
+                                    <option value="consultation">상담 후 결정</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">상세 내용</label>
+                            <textarea id="message" name="message" rows="4" 
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 transition resize-none"
+                                      placeholder="원하시는 작품 스타일, 특별한 요청사항, 일정 등 자세한 내용을 알려주세요."></textarea>
+                        </div>
+
+                        <!-- File Upload Notice -->
+                        <div class="bg-green-50 border border-green-200 rounded-xl p-4">
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-info-circle text-green-600 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-green-800 mb-1">사진 전송 안내</h4>
+                                    <p class="text-sm text-green-700">
+                                        반려동물 사진은 문의 후 카카오톡, 인스타그램 DM, 또는 문자로 전송해주세요. 
+                                        여러 장의 다양한 각도 사진이 있을수록 더 정확한 작품 완성이 가능합니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Privacy Agreement -->
+                        <div class="flex items-start space-x-3">
+                            <input type="checkbox" id="privacy" name="privacy" required 
+                                   class="mt-1 text-green-600 border-gray-300 rounded focus:ring-green-600">
+                            <label for="privacy" class="text-sm text-gray-600">
+                                개인정보 수집 및 이용에 동의합니다. 
+                                <a href="#" class="text-green-600 hover:underline">(자세히 보기)</a>
+                            </label>
+                        </div>
+
+                        <!-- Submit Button - Google Form -->
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsWakQHzPPMUsfa-ew7Kb0hEgAOlvWmXTx7uEp1QWFyTgcJg/viewform" 
+                           target="_blank"
+                           class="w-full bg-green-600 text-white py-4 rounded-xl font-semibold hover:bg-green-700 transition transform hover:scale-105 flex items-center justify-center">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            견적 문의 보내기 (구글폼)
+                        </a>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div id="contact-info" class="space-y-8">
+                    <!-- Quick Contact -->
+                    <div class="bg-white rounded-3xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                            <i class="fas fa-headset text-green-600 mr-3"></i>
+                            빠른 상담
+                        </h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-2xl">
+                                <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">전화 상담</h4>
+                                    <a href="tel:010-4430-4679" class="text-green-600 font-semibold">010-4430-4679</a>
+                                    <p class="text-sm text-gray-500">평일 9시~18시 (상담 우선)</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-2xl">
+                                <div class="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center">
+                                    <i class="fab fa-instagram text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">인스타그램 DM</h4>
+                                    <a href="https://instagram.com/v_green_art" target="_blank" class="text-pink-600 font-semibold">@v_green_art</a>
+                                    <p class="text-sm text-gray-500">24시간 언제든 메시지</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Operating Hours -->
+                    <div class="bg-white rounded-3xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                            <i class="fas fa-clock text-green-600 mr-3"></i>
+                            운영 시간
+                        </h3>
+                        
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                                <span class="font-semibold text-gray-700">평일 (월~금)</span>
+                                <span class="text-green-600 font-semibold">09:00 ~ 18:00</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                                <span class="font-semibold text-gray-700">토요일</span>
+                                <span class="text-green-600 font-semibold">10:00 ~ 16:00</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                                <span class="font-semibold text-gray-700">일요일/공휴일</span>
+                                <span class="text-gray-500">휴무</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2">
+                                <span class="font-semibold text-gray-700">이벤트 출장</span>
+                                <span class="text-blue-600 font-semibold">협의 후 결정</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
+                            <p class="text-sm text-yellow-800">
+                                <i class="fas fa-exclamation-triangle text-yellow-600 mr-2"></i>
+                                작업 중일 때는 전화 응답이 어려울 수 있습니다. 
+                                문자나 인스타그램 DM으로 연락주시면 빠르게 답변드립니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Response Time -->
+                    <div class="bg-white rounded-3xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                            <i class="fas fa-reply text-green-600 mr-3"></i>
+                            답변 시간
+                        </h3>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center p-4 bg-green-50 rounded-2xl">
+                                <div class="text-2xl font-bold text-green-600 mb-2">2시간</div>
+                                <div class="text-sm text-gray-600">평균 첫 답변</div>
+                            </div>
+                            <div class="text-center p-4 bg-blue-50 rounded-2xl">
+                                <div class="text-2xl font-bold text-blue-600 mb-2">24시간</div>
+                                <div class="text-sm text-gray-600">상세 견적서</div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 p-4 bg-gray-50 rounded-2xl">
+                            <h4 class="font-semibold text-gray-800 mb-2">견적서 포함 내역</h4>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• 작업 방식 및 기법 상세 설명</li>
+                                <li>• 예상 제작 기간</li>
+                                <li>• 단계별 작업 과정</li>
+                                <li>• 최종 가격 및 결제 방법</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Social -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Location -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-8">
+                        <i class="fas fa-map-marker-alt text-green-600 mr-3"></i>
+                        작업실 위치
+                    </h2>
+                    
+                    <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8">
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">V_Green 아틀리에</h3>
+                            <p class="text-gray-600 mb-4">서울 도봉구 일대 (상세 주소는 예약 시 안내)</p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-subway text-green-600 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">지하철 이용</h4>
+                                    <p class="text-sm text-gray-600">1호선, 4호선, 7호선 접근 용이</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-car text-green-600 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">자가용 이용</h4>
+                                    <p class="text-sm text-gray-600">주차 공간 완비</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-calendar-check text-green-600 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">방문 상담</h4>
+                                    <p class="text-sm text-gray-600">사전 예약 필수 (작업 진행 확인 가능)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social & Portfolio -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-8">
+                        <i class="fas fa-share-alt text-green-600 mr-3"></i>
+                        소셜 미디어
+                    </h2>
+
+                    <div class="space-y-6">
+                        <!-- Instagram -->
+                        <div class="bg-gradient-to-r from-pink-500 to-purple-600 rounded-3xl p-6 text-white">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fab fa-instagram text-3xl"></i>
+                                    <div>
+                                        <h3 class="text-xl font-bold">Instagram</h3>
+                                        <p class="text-pink-100">@v_green_art</p>
+                                    </div>
+                                </div>
+                                <a href="https://instagram.com/v_green_art" target="_blank" 
+                                   class="bg-white text-pink-600 px-4 py-2 rounded-full font-semibold hover:bg-pink-50 transition">
+                                    팔로우
+                                </a>
+                            </div>
+                            <p class="text-sm opacity-90">
+                                최신 작품 업데이트와 작업 과정을 실시간으로 확인하세요. 
+                                DM으로 빠른 상담도 가능합니다.
+                            </p>
+                        </div>
+
+                        <!-- Blog -->
+                        <div class="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-3xl p-6 text-white">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-blog text-3xl"></i>
+                                    <div>
+                                        <h3 class="text-xl font-bold">네이버 블로그</h3>
+                                        <p class="text-blue-100">V_Green 작가 일기</p>
+                                    </div>
+                                </div>
+                                <a href="https://blog.naver.com/v_green_blog" target="_blank" 
+                                   class="bg-white text-blue-600 px-4 py-2 rounded-full font-semibold hover:bg-blue-50 transition">
+                                    방문하기
+                                </a>
+                            </div>
+                            <p class="text-sm opacity-90">
+                                상세한 작업 과정과 고객 후기를 확인하세요. 
+                                다양한 작품 사례와 팁도 공유합니다.
+                            </p>
+                        </div>
+
+                        <!-- Reviews -->
+                        <div class="bg-gray-100 rounded-3xl p-6">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <i class="fas fa-star text-3xl text-yellow-500"></i>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800">고객 후기</h3>
+                                    <div class="flex items-center space-x-2">
+                                        <div class="flex text-yellow-500">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="text-gray-600 font-semibold">4.8/5.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-4 text-center">
+                                <div>
+                                    <div class="text-2xl font-bold text-gray-800">300+</div>
+                                    <div class="text-sm text-gray-600">리뷰 수</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-green-600">40%</div>
+                                    <div class="text-sm text-gray-600">재주문율</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-blue-600">85%</div>
+                                    <div class="text-sm text-gray-600">추천율</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                    자주 묻는 질문
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    문의 전 궁금한 내용을 먼저 확인해보세요
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- FAQ 1 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+                        <h3 class="font-bold text-gray-800 mb-3">Q. 작업 기간은 얼마나 걸리나요?</h3>
+                        <p class="text-gray-600 text-sm">
+                            유화는 2-3주, 아크릴화는 1-2주, 캐리커쳐는 1주일 내 완성됩니다. 
+                            사이즈와 복잡도에 따라 조금씩 달라질 수 있으며, 정확한 일정은 주문 시 안내드립니다.
+                        </p>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+                        <h3 class="font-bold text-gray-800 mb-3">Q. 수정이 가능한가요?</h3>
+                        <p class="text-gray-600 text-sm">
+                            초기 스케치 단계에서 1회 무료 수정이 가능합니다. 
+                            색칠 시작 후의 수정은 별도 비용이 발생할 수 있으니, 스케치 확인 시 신중히 검토해주세요.
+                        </p>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+                        <h3 class="font-bold text-gray-800 mb-3">Q. 사진이 흐려도 작업 가능한가요?</h3>
+                        <p class="text-gray-600 text-sm">
+                            다소 흐린 사진도 작업 가능하지만, 선명하고 다양한 각도의 사진이 있을수록 
+                            더 정교하고 만족스러운 작품을 완성할 수 있습니다.
+                        </p>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+                        <h3 class="font-bold text-gray-800 mb-3">Q. 전국 출장이 가능한가요?</h3>
+                        <p class="text-gray-600 text-sm">
+                            수도권은 무료 출장이며, 지방은 거리에 따라 교통비와 숙박비가 추가됩니다. 
+                            출장비는 사전에 명확히 안내드리니 부담 없이 문의해주세요.
+                        </p>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+                        <h3 class="font-bold text-gray-800 mb-3">Q. 결제는 어떻게 하나요?</h3>
+                        <p class="text-gray-600 text-sm">
+                            계약금 50%, 완성 후 50% 분할 결제를 기본으로 합니다. 
+                            계좌이체, 카드결제 모두 가능하며, 현금영수증도 발행 가능합니다.
+                        </p>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+                        <h3 class="font-bold text-gray-800 mb-3">Q. 작업 과정을 볼 수 있나요?</h3>
+                        <p class="text-gray-600 text-sm">
+                            네, 스케치 단계와 중간 과정을 사진으로 공유드립니다. 
+                            작업실 방문도 가능하니 미리 연락 후 오시면 됩니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                지금 바로 상담받고 특별한 작품을 만들어보세요
+            </h2>
+            <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                500+ 작품 완성 경험과 검증된 품질로 우리 아이만의 특별한 작품을 완성하세요
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:010-4430-4679" class="bg-white text-green-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition transform hover:scale-105">
+                    <i class="fas fa-phone mr-2"></i>
+                    지금 전화하기
+                </a>
+                <a href="https://instagram.com/v_green_art" target="_blank" class="border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-full font-semibold transition">
+                    <i class="fab fa-instagram mr-2"></i>
+                    인스타그램 DM
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="text-3xl font-bold text-white mb-4">V_Green</div>
+                <p class="mb-6">홍지선 작가의 전문 펜트 포트레이트</p>
+                
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://instagram.com/v_green_art" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="https://blog.naver.com/v_green_blog" class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-blog text-2xl"></i>
+                    </a>
+                    <a href="tel:010-4430-4679" class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-phone text-2xl"></i>
+                    </a>
+                </div>
+                
+                <div class="text-sm">
+                    <p>&copy; 2024 V_Green. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Contact Form Handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Simple validation
+            if (!data.name || !data.phone || !data.service) {
+                alert('필수 항목을 모두 입력해주세요.');
+                return;
+            }
+            
+            // Show success message (in real implementation, this would send to server)
+            alert('문의가 성공적으로 전송되었습니다. 24시간 내에 연락드리겠습니다!');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>

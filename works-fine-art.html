@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine Art Portfolio - V_Green | 홍지선 유화 & 아크릴화 작품</title>
+    <meta name="description" content="홍지선 작가의 전문 유화 및 아크릴화 작품 포트폴리오. 반려동물 초상화부터 정물화까지 정교한 기법으로 완성하는 맞춤 작품.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="font-inter">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-green-600">
+                    <a href="index.html">V_Green</a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about.html" class="text-gray-700 hover:text-green-600 transition">About</a>
+                    
+                    <!-- Works Dropdown -->
+                    <div class="relative group">
+                        <button class="text-green-600 font-semibold flex items-center space-x-1">
+                            <span>Works</span>
+                            <i class="fas fa-chevron-down text-sm transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-2xl shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="p-2">
+                                <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-green-50 group">
+                                    <div class="w-10 h-10 bg-amber-200 rounded-xl flex items-center justify-center">
+                                        <i class="fas fa-palette text-amber-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-green-600">Fine Art</div>
+                                        <div class="text-sm text-gray-500">유화 & 아크릴화</div>
+                                    </div>
+                                </a>
+                                <a href="works-caricature.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl hover:bg-green-50 transition group">
+                                    <div class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-purple-200 transition">
+                                        <i class="fas fa-magic text-purple-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-800">Caricature</div>
+                                        <div class="text-sm text-gray-500">라이브 & 스튜디오</div>
+                                    </div>
+                                </a>
+                                <a href="works-calligraphy.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl hover:bg-green-50 transition group">
+                                    <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-200 transition">
+                                        <i class="fas fa-pen-nib text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-800">Calligraphy</div>
+                                        <div class="text-sm text-gray-500">전통 & 현대</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="services.html" class="text-gray-700 hover:text-green-600 transition">Services</a>
+                    <a href="exhibition.html" class="text-gray-700 hover:text-green-600 transition">Exhibition</a>
+                    <a href="contact.html" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition">Contact</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-700 hover:text-green-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-2 px-6">
+                    <a href="about.html" class="text-gray-700 hover:text-green-600 transition py-2">About</a>
+                    
+                    <!-- Mobile Works Menu -->
+                    <div class="py-2">
+                        <button class="flex items-center justify-between w-full text-green-600 font-semibold transition" id="mobile-works-toggle">
+                            <span>Works</span>
+                            <i class="fas fa-chevron-down text-sm transition-transform" id="mobile-works-icon"></i>
+                        </button>
+                        <div class="ml-4 mt-2 space-y-2 hidden" id="mobile-works-menu">
+                            <a href="#" class="flex items-center space-x-2 text-green-600 font-semibold py-1">
+                                <i class="fas fa-palette text-amber-500 text-sm"></i>
+                                <span>Fine Art</span>
+                            </a>
+                            <a href="works-caricature.html" class="flex items-center space-x-2 text-gray-500 hover:text-green-600 transition py-1">
+                                <i class="fas fa-magic text-purple-500 text-sm"></i>
+                                <span>Caricature</span>
+                            </a>
+                            <a href="works-calligraphy.html" class="flex items-center space-x-2 text-gray-500 hover:text-green-600 transition py-1">
+                                <i class="fas fa-pen-nib text-blue-500 text-sm"></i>
+                                <span>Calligraphy</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="services.html" class="text-gray-700 hover:text-green-600 transition py-2">Services</a>
+                    <a href="exhibition.html" class="text-gray-700 hover:text-green-600 transition py-2">Exhibition</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-green-600 transition py-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-green-50">
+        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+            <span class="inline-block px-4 py-2 bg-green-600 text-white rounded-full text-sm font-semibold mb-6">
+                Fine Art Specialist
+            </span>
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
+                유화 & 아크릴화
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
+                전통적인 유화 기법부터 현대적인 아크릴 페인팅까지<br>
+                정교한 붓터치로 완성하는 품격 있는 작품
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#portfolio" class="bg-green-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-green-700 transition transform hover:scale-105">
+                    작품 갤러리 보기
+                </a>
+                <a href="#process" class="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-8 py-4 rounded-full font-semibold transition">
+                    작업 과정 알아보기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Techniques Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-green-600 font-semibold tracking-wider uppercase text-sm">Techniques</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">
+                    전문 회화 기법
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    각 매체의 특성을 살린 전문적인 기법으로 생동감 넘치는 작품을 완성합니다
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <!-- Oil Painting -->
+                <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-8">
+                    <div class="w-16 h-16 bg-amber-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-palette text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">유화 (Oil Painting)</h3>
+                    <div class="space-y-4 text-gray-700">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-amber-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">전통 기법</h4>
+                                <p class="text-sm">언더페인팅부터 글레이징까지 고전 기법 적용</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-amber-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">풍부한 색감</h4>
+                                <p class="text-sm">오일의 특성을 살린 깊이 있는 색채 표현</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-amber-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">정교한 디테일</h4>
+                                <p class="text-sm">느린 건조 특성을 활용한 세밀한 묘사</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Acrylic Painting -->
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8">
+                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-brush text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">아크릴화 (Acrylic Painting)</h3>
+                    <div class="space-y-4 text-gray-700">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">현대적 기법</h4>
+                                <p class="text-sm">빠른 건조와 다양한 텍스처 활용</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">선명한 발색</h4>
+                                <p class="text-sm">생생하고 밝은 색감의 현대적 표현</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">다양한 효과</h4>
+                                <p class="text-sm">임파스토부터 워시 기법까지 자유로운 표현</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-green-600 font-semibold tracking-wider uppercase text-sm">Portfolio</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">
+                    Fine Art 작품 갤러리
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    유화와 아크릴화의 전문 기법으로 완성한 다양한 작품들을 만나보세요
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn active bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition hover:bg-green-700" data-filter="all">
+                    전체 작품
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-semibold border border-gray-300 hover:border-green-600 hover:text-green-600 transition" data-filter="oil">
+                    유화
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-semibold border border-gray-300 hover:border-green-600 hover:text-green-600 transition" data-filter="acrylic">
+                    아크릴화
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-semibold border border-gray-300 hover:border-green-600 hover:text-green-600 transition" data-filter="portrait">
+                    반려동물 초상화
+                </button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="oil portrait">
+                    <div class="relative overflow-hidden">
+                        <img src="images/portfolio-before-1.jpg" alt="유화 반려동물 초상화 작품" class="w-full h-80 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Oil Painting
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">골든 리트리버 초상화</h3>
+                        <p class="text-gray-600 mb-4">40cm x 50cm, Canvas on Oil</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-green-600 font-semibold">₩350,000</span>
+                            <button class="text-gray-500 hover:text-green-600 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="acrylic portrait">
+                    <div class="relative overflow-hidden">
+                        <img src="images/portfolio-before-2.jpg" alt="아크릴화 반려동물 초상화 작품" class="w-full h-80 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Acrylic Painting
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">시바견 초상화</h3>
+                        <p class="text-gray-600 mb-4">30cm x 40cm, Canvas on Acrylic</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-green-600 font-semibold">₩280,000</span>
+                            <button class="text-gray-500 hover:text-green-600 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="oil">
+                    <div class="relative overflow-hidden">
+                        <img src="images/portfolio-before-3.jpg" alt="유화 정물화 작품" class="w-full h-80 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Oil Painting
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">클래식 정물화</h3>
+                        <p class="text-gray-600 mb-4">50cm x 60cm, Canvas on Oil</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-green-600 font-semibold">₩420,000</span>
+                            <button class="text-gray-500 hover:text-green-600 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="acrylic">
+                    <div class="relative overflow-hidden">
+                        <img src="images/portfolio-before-4.jpg" alt="아크릴화 추상 작품" class="w-full h-80 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Acrylic Painting
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">현대 추상화</h3>
+                        <p class="text-gray-600 mb-4">60cm x 80cm, Canvas on Acrylic</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-green-600 font-semibold">₩480,000</span>
+                            <button class="text-gray-500 hover:text-green-600 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="oil portrait">
+                    <div class="relative overflow-hidden">
+                        <img src="images/portfolio-before-5.jpg" alt="유화 고양이 초상화 작품" class="w-full h-80 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Oil Painting
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">페르시안 고양이</h3>
+                        <p class="text-gray-600 mb-4">35cm x 45cm, Canvas on Oil</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-green-600 font-semibold">₩320,000</span>
+                            <button class="text-gray-500 hover:text-green-600 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="acrylic portrait">
+                    <div class="relative overflow-hidden">
+                        <img src="images/portfolio-before-6.jpg" alt="아크릴화 토끼 초상화 작품" class="w-full h-80 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Acrylic Painting
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">홀랜드 롭 토끼</h3>
+                        <p class="text-gray-600 mb-4">25cm x 35cm, Canvas on Acrylic</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-green-600 font-semibold">₩250,000</span>
+                            <button class="text-gray-500 hover:text-green-600 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-green-600 font-semibold tracking-wider uppercase text-sm">Process</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">
+                    작업 과정
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    체계적이고 전문적인 과정을 통해 완성도 높은 작품을 만들어갑니다
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <!-- Process Step 1 -->
+                <div class="flex flex-col md:flex-row items-center mb-16">
+                    <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                        <div class="flex items-center mb-4">
+                            <span class="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">1</span>
+                            <h3 class="text-2xl font-bold text-gray-800">스케치 & 구상</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            제공해주신 사진을 바탕으로 구도와 색감을 계획합니다. 반려동물의 특징과 개성을 파악하여 가장 매력적인 모습을 포착할 수 있는 구성을 설계합니다.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="bg-gradient-to-br from-green-100 to-blue-100 rounded-2xl p-8 text-center">
+                            <i class="fas fa-pencil-alt text-4xl text-green-600 mb-4"></i>
+                            <p class="text-gray-700 font-semibold">초기 스케치 & 구도 설정</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process Step 2 -->
+                <div class="flex flex-col md:flex-row-reverse items-center mb-16">
+                    <div class="md:w-1/2 mb-8 md:mb-0 md:pl-8">
+                        <div class="flex items-center mb-4">
+                            <span class="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">2</span>
+                            <h3 class="text-2xl font-bold text-gray-800">언더페인팅</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            유화의 경우 언더페인팅으로 기본 톤을 설정하고, 아크릴의 경우 베이스 컬러를 깔아 전체적인 명암과 색조의 기반을 마련합니다.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="bg-gradient-to-br from-amber-100 to-orange-100 rounded-2xl p-8 text-center">
+                            <i class="fas fa-palette text-4xl text-amber-600 mb-4"></i>
+                            <p class="text-gray-700 font-semibold">기본 색조 & 명암 설정</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process Step 3 -->
+                <div class="flex flex-col md:flex-row items-center mb-16">
+                    <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                        <div class="flex items-center mb-4">
+                            <span class="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">3</span>
+                            <h3 class="text-2xl font-bold text-gray-800">색채 레이어링</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            단계별로 색을 쌓아가며 깊이와 입체감을 표현합니다. 털의 질감, 눈의 광택, 피부의 따뜻함 등 세부적인 특징들을 점진적으로 완성해나갑니다.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl p-8 text-center">
+                            <i class="fas fa-brush text-4xl text-blue-600 mb-4"></i>
+                            <p class="text-gray-700 font-semibold">단계별 색채 완성</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process Step 4 -->
+                <div class="flex flex-col md:flex-row-reverse items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0 md:pl-8">
+                        <div class="flex items-center mb-4">
+                            <span class="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">4</span>
+                            <h3 class="text-2xl font-bold text-gray-800">디테일 마무리</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            가장 세밀한 부분까지 정교하게 완성합니다. 눈동자의 반짝임, 털 한 올 한 올의 방향성, 코끝의 촉촉함까지 생생한 생명력을 불어넣습니다.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="bg-gradient-to-br from-pink-100 to-red-100 rounded-2xl p-8 text-center">
+                            <i class="fas fa-gem text-4xl text-pink-600 mb-4"></i>
+                            <p class="text-gray-700 font-semibold">정밀 디테일 완성</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-green-600 font-semibold tracking-wider uppercase text-sm">Pricing</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">
+                    작품 가격 안내
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    캔버스 크기와 매체에 따른 투명한 가격 체계로 안내드립니다
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Oil Painting Pricing -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="text-center mb-8">
+                        <div class="w-20 h-20 bg-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-palette text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">유화 (Oil Painting)</h3>
+                        <p class="text-gray-600">전통적인 유화 기법의 깊이 있는 작품</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-4 bg-gray-50 rounded-xl">
+                            <span class="font-semibold text-gray-700">20cm × 25cm</span>
+                            <span class="text-xl font-bold text-amber-600">₩200,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-gray-50 rounded-xl">
+                            <span class="font-semibold text-gray-700">30cm × 40cm</span>
+                            <span class="text-xl font-bold text-amber-600">₩320,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-gray-50 rounded-xl">
+                            <span class="font-semibold text-gray-700">40cm × 50cm</span>
+                            <span class="text-xl font-bold text-amber-600">₩450,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-gray-50 rounded-xl">
+                            <span class="font-semibold text-gray-700">50cm × 60cm</span>
+                            <span class="text-xl font-bold text-amber-600">₩580,000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-semibold text-gray-800 mb-3">포함 사항</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check text-amber-600 mr-2"></i> 고급 캔버스 및 프레임</li>
+                            <li class="flex items-center"><i class="fas fa-check text-amber-600 mr-2"></i> 전문 유화 물감 사용</li>
+                            <li class="flex items-center"><i class="fas fa-check text-amber-600 mr-2"></i> 작업 과정 사진 제공</li>
+                            <li class="flex items-center"><i class="fas fa-check text-amber-600 mr-2"></i> 작가 사인 및 인증서</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Acrylic Painting Pricing -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="text-center mb-8">
+                        <div class="w-20 h-20 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-brush text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">아크릴화 (Acrylic)</h3>
+                        <p class="text-gray-600">현대적이고 생생한 아크릴 페인팅</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-4 bg-gray-50 rounded-xl">
+                            <span class="font-semibold text-gray-700">20cm × 25cm</span>
+                            <span class="text-xl font-bold text-blue-600">₩150,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-gray-50 rounded-xl">
+                            <span class="font-semibold text-gray-700">30cm × 40cm</span>
+                            <span class="text-xl font-bold text-blue-600">₩250,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-gray-50 rounded-xl">
+                            <span class="font-semibold text-gray-700">40cm × 50cm</span>
+                            <span class="text-xl font-bold text-blue-600">₩350,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-gray-50 rounded-xl">
+                            <span class="font-semibold text-gray-700">50cm × 60cm</span>
+                            <span class="text-xl font-bold text-blue-600">₩450,000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-semibold text-gray-800 mb-3">포함 사항</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i> 고급 캔버스 및 프레임</li>
+                            <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i> 전문 아크릴 물감 사용</li>
+                            <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i> 작업 과정 사진 제공</li>
+                            <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i> 작가 사인 및 인증서</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="max-w-3xl mx-auto mt-12 p-8 bg-gradient-to-r from-green-50 to-blue-50 rounded-3xl">
+                <div class="text-center mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">추가 옵션</h3>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6 text-sm">
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">배송 및 포장</h4>
+                        <ul class="space-y-1 text-gray-600">
+                            <li>• 안전 포장 무료 제공</li>
+                            <li>• 전국 택배 배송 (₩10,000)</li>
+                            <li>• 직접 수령 가능</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">제작 기간</h4>
+                        <ul class="space-y-1 text-gray-600">
+                            <li>• 유화: 2-3주 소요</li>
+                            <li>• 아크릴화: 1-2주 소요</li>
+                            <li>• 특급 제작 시 추가 요금</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                우리 아이만의 특별한 유화 작품을 만나보세요
+            </h2>
+            <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                전문적인 유화 및 아크릴화 기법으로 반려동물의 생생한 모습을 영원히 간직하세요
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#contact" class="bg-white text-green-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition transform hover:scale-105">
+                    작품 의뢰하기
+                </a>
+                <a href="about.html" class="border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-full font-semibold transition">
+                    작가 소개 보기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="text-3xl font-bold text-white mb-4">V_Green</div>
+                <p class="mb-6">홍지선 작가의 전문 펜트 포트레이트</p>
+                
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://instagram.com/v_green_art" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="https://blog.naver.com/v_green_blog" class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-blog text-2xl"></i>
+                    </a>
+                    <a href="tel:010-4430-4679" class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-phone text-2xl"></i>
+                    </a>
+                </div>
+                
+                <div class="text-sm">
+                    <p>&copy; 2024 V_Green. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!-- Unified Navigation Template for All Pages -->
+<!-- Navigation -->
+<nav class="bg-white shadow-sm fixed w-full z-50">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <div class="text-2xl font-bold text-green-600">
+                <a href="index.html">V_Green</a>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="about.html" class="text-gray-700 hover:text-green-600 transition">About</a>
+                
+                <!-- Works Dropdown -->
+                <div class="relative group">
+                    <button class="text-gray-700 hover:text-green-600 transition flex items-center space-x-1">
+                        <span>Works</span>
+                        <i class="fas fa-chevron-down text-sm transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-2xl shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="p-2">
+                            <a href="works-fine-art.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl hover:bg-green-50 transition group">
+                                <div class="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center group-hover:bg-amber-200 transition">
+                                    <i class="fas fa-palette text-amber-600"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800">Fine Art</div>
+                                    <div class="text-sm text-gray-500">유화 & 아크릴화</div>
+                                </div>
+                            </a>
+                            <a href="works-caricature.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl hover:bg-green-50 transition group">
+                                <div class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-purple-200 transition">
+                                    <i class="fas fa-magic text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800">Caricature</div>
+                                    <div class="text-sm text-gray-500">라이브 & 스튜디오</div>
+                                </div>
+                            </a>
+                            <a href="works-calligraphy.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl hover:bg-green-50 transition group">
+                                <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-200 transition">
+                                    <i class="fas fa-pen-nib text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800">Calligraphy</div>
+                                    <div class="text-sm text-gray-500">전통 & 현대</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="services.html" class="text-gray-700 hover:text-green-600 transition">Services</a>
+                <a href="exhibition.html" class="text-gray-700 hover:text-green-600 transition">Exhibition</a>
+                <a href="contact.html" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition">Contact</a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobileMenuBtn" class="text-gray-700 hover:text-green-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+            <div class="flex flex-col space-y-2 px-6">
+                <a href="about.html" class="text-gray-700 hover:text-green-600 transition py-2">About</a>
+                
+                <!-- Mobile Works Menu -->
+                <div class="py-2">
+                    <button class="flex items-center justify-between w-full text-gray-700 hover:text-green-600 transition" id="mobile-works-toggle">
+                        <span>Works</span>
+                        <i class="fas fa-chevron-down text-sm transition-transform" id="mobile-works-icon"></i>
+                    </button>
+                    <div class="ml-4 mt-2 space-y-2 hidden" id="mobile-works-menu">
+                        <a href="works-fine-art.html" class="flex items-center space-x-2 text-gray-500 hover:text-green-600 transition py-1">
+                            <i class="fas fa-palette text-amber-500 text-sm"></i>
+                            <span>Fine Art</span>
+                        </a>
+                        <a href="works-caricature.html" class="flex items-center space-x-2 text-gray-500 hover:text-green-600 transition py-1">
+                            <i class="fas fa-magic text-purple-500 text-sm"></i>
+                            <span>Caricature</span>
+                        </a>
+                        <a href="works-calligraphy.html" class="flex items-center space-x-2 text-gray-500 hover:text-green-600 transition py-1">
+                            <i class="fas fa-pen-nib text-blue-500 text-sm"></i>
+                            <span>Calligraphy</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <a href="services.html" class="text-gray-700 hover:text-green-600 transition py-2">Services</a>
+                <a href="exhibition.html" class="text-gray-700 hover:text-green-600 transition py-2">Exhibition</a>
+                <a href="contact.html" class="text-gray-700 hover:text-green-600 transition py-2">Contact</a>
+            </div>
+        </div>
+    </div>
+</nav>
