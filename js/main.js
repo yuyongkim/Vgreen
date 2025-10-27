@@ -6,6 +6,7 @@
 // DOM Content Loaded Event
 document.addEventListener('DOMContentLoaded', function() {
     initializeWebsite();
+    initPageTransitions();
 });
 
 // Website Initialization
@@ -511,4 +512,88 @@ function initAnalytics() {
 // Initialize analytics
 document.addEventListener('DOMContentLoaded', function() {
     initAnalytics();
+});
+
+// Page Transition Functions
+function initPageTransitions() {
+    // 페이지 로딩 애니메이션
+    showPageLoading();
+    
+    // 모든 내부 링크에 전환 효과 적용
+    const internalLinks = document.querySelectorAll('a[href^="index.html"], a[href^="about.html"], a[href^="works-"], a[href^="louis-vuitton.html"], a[href^="services.html"], a[href^="exhibition.html"], a[href^="contact.html"]');
+    
+    internalLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            
+            if (href && href !== window.location.pathname) {
+                transitionToPage(href);
+            }
+        });
+    });
+}
+
+function showPageLoading() {
+    // 로딩 화면이 이미 있으면 제거
+    const existingLoading = document.querySelector('.page-loading');
+    if (existingLoading) {
+        existingLoading.remove();
+    }
+    
+    // 로딩 화면 생성
+    const loadingDiv = document.createElement('div');
+    loadingDiv.className = 'page-loading';
+    loadingDiv.innerHTML = `
+        <div class="text-center">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">V_Green 로딩 중...</div>
+        </div>
+    `;
+    
+    document.body.appendChild(loadingDiv);
+    
+    // 페이지 로드 완료 후 로딩 화면 숨기기
+    window.addEventListener('load', function() {
+        setTimeout(() => {
+            loadingDiv.classList.add('hidden');
+            setTimeout(() => {
+                loadingDiv.remove();
+            }, 500);
+        }, 800); // 최소 800ms 로딩 시간
+    });
+}
+
+function transitionToPage(url) {
+    // 페이드 아웃 효과
+    document.body.style.transition = 'opacity 0.3s ease';
+    document.body.style.opacity = '0.7';
+    
+    // 로딩 화면 표시
+    showPageLoading();
+    
+    // 페이지 이동
+    setTimeout(() => {
+        window.location.href = url;
+    }, 300);
+}
+
+// 페이지 진입 애니메이션
+function initPageEnterAnimation() {
+    const mainContent = document.querySelector('main, .container, section');
+    if (mainContent) {
+        mainContent.classList.add('page-transition');
+        
+        // 페이지 로드 완료 후 애니메이션 실행
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                mainContent.classList.add('loaded');
+            }, 100);
+        });
+    }
+}
+
+// 페이지 진입 애니메이션 초기화
+document.addEventListener('DOMContentLoaded', function() {
+    initPageEnterAnimation();
 });
