@@ -8,6 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS (Animate On Scroll) Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -315,7 +317,7 @@
             <!-- Portfolio Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
                 <!-- Portfolio Item 1 -->
-                <div class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="oil portrait">
+                <div class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="oil portrait" data-aos="fade-up" data-aos-delay="100">
                     <div class="relative overflow-hidden">
                         <div class="grid grid-cols-2 gap-2">
                             <img src="images/extracted_images/page_1_image_1.jpg" alt="원본 사진" class="w-full h-80 object-cover transition-transform duration-300 hover:scale-110">
@@ -739,6 +741,20 @@
         </div>
     </footer>
 
+    <!-- AOS (Animate On Scroll) Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <script src="js/main.js"></script>
+    
+    <script>
+        // AOS 초기화
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100,
+            delay: 0
+        });
+    </script>
 </body>
 </html>

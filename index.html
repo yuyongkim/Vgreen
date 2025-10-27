@@ -16,6 +16,9 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- AOS (Animate On Scroll) Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -177,7 +180,7 @@
     <section id="about" class="py-20 bg-gradient-to-b from-white to-gray-50">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-                <div class="order-2 md:order-1">
+                <div class="order-2 md:order-1" data-aos="fade-right" data-aos-delay="100">
                     <div class="mb-8">
                         <span class="text-green-600 font-semibold tracking-wider uppercase text-sm">About Artist</span>
                         <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mt-2 mb-6">
@@ -205,22 +208,22 @@
                         
                         <div class="grid grid-cols-3 gap-4 mt-8">
                             <div class="text-center p-4">
-                                <div class="text-2xl font-bold text-green-600">50+</div>
+                                <div class="text-2xl font-bold text-green-600 counter" data-target="50">0</div>
                                 <div class="text-xs text-gray-600 mt-1">완성된 작품</div>
                             </div>
                             <div class="text-center p-4">
-                                <div class="text-2xl font-bold text-green-600">8+</div>
+                                <div class="text-2xl font-bold text-green-600 counter" data-target="8">0</div>
                                 <div class="text-xs text-gray-600 mt-1">전시&활동</div>
                             </div>
                             <div class="text-center p-4">
-                                <div class="text-2xl font-bold text-green-600">5+</div>
+                                <div class="text-2xl font-bold text-green-600 counter" data-target="5">0</div>
                                 <div class="text-xs text-gray-600 mt-1">프로그램 운영</div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="order-1 md:order-2">
+                <div class="order-1 md:order-2" data-aos="fade-left" data-aos-delay="200">
                     <div class="relative">
                         <div class="artist-image-container">
                             <img src="https://page.gensparksite.com/v1/base64_upload/c965e012c32e3176a025cd45a95f73c4" 
@@ -317,7 +320,7 @@
             <!-- Before & After Portfolio Grid -->
             <div class="space-y-12">
                 <!-- 작품 비교 #1 -->
-                <div class="portfolio-comparison">
+                <div class="portfolio-comparison" data-aos="fade-up" data-aos-delay="100">
                     <div class="grid lg:grid-cols-2 gap-8 items-center">
                         <!-- 원본 사진 -->
                         <div class="comparison-before">
@@ -368,7 +371,7 @@
                 </div>
                 
                 <!-- 작품 비교 #2 -->
-                <div class="portfolio-comparison">
+                <div class="portfolio-comparison" data-aos="fade-up" data-aos-delay="200">
                     <div class="grid lg:grid-cols-2 gap-8 items-center">
                         <div class="comparison-before">
                             <div class="relative group">
@@ -416,7 +419,7 @@
                 </div>
                 
                 <!-- 작품 비교 #3 -->
-                <div class="portfolio-comparison">
+                <div class="portfolio-comparison" data-aos="fade-up" data-aos-delay="300">
                     <div class="grid lg:grid-cols-2 gap-8 items-center">
                         <div class="comparison-before">
                             <div class="relative group">
@@ -464,7 +467,7 @@
                 </div>
                 
                 <!-- 작품 비교 #4 -->
-                <div class="portfolio-comparison">
+                <div class="portfolio-comparison" data-aos="fade-up" data-aos-delay="400">
                     <div class="grid lg:grid-cols-2 gap-8 items-center">
                         <div class="comparison-before">
                             <div class="relative group">
@@ -979,6 +982,64 @@
         </div>
     </footer>
 
+    <!-- AOS (Animate On Scroll) Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <script src="js/main.js"></script>
+    
+    <script>
+        // AOS 초기화
+        AOS.init({
+            duration: 800,        // 애니메이션 지속시간
+            easing: 'ease-in-out', // 애니메이션 이징
+            once: true,           // 한 번만 실행
+            offset: 100,          // 트리거 오프셋
+            delay: 0              // 지연시간
+        });
+
+        // 카운터 애니메이션 함수
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 2000; // 2초 동안 애니메이션
+            const start = performance.now();
+            
+            function updateCounter(currentTime) {
+                const elapsed = currentTime - start;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // easeOutQuart 이징 함수
+                const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+                const current = Math.floor(easeOutQuart * target);
+                
+                element.textContent = current + '+';
+                
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                }
+            }
+            
+            requestAnimationFrame(updateCounter);
+        }
+
+        // 카운터 요소들을 관찰하는 Intersection Observer
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    counterObserver.unobserve(entry.target); // 한 번만 실행
+                }
+            });
+        }, {
+            threshold: 0.5 // 요소의 50%가 보일 때 실행
+        });
+
+        // 모든 카운터 요소에 관찰자 적용
+        document.addEventListener('DOMContentLoaded', function() {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                counterObserver.observe(counter);
+            });
+        });
+    </script>
 </body>
 </html>
