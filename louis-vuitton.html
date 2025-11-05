@@ -8,6 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS (Animate On Scroll) Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <style>
         .louis-vuitton-gradient {
@@ -319,18 +321,17 @@
                 </p>
             </div>
 
-            <!-- Portfolio Grid with Scroll Animation -->
-            <div class="space-y-16 max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <!-- Portfolio Item 1 - Large Dog -->
-                <div class="scroll-reveal bg-white rounded-3xl overflow-hidden shadow-lg">
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-6">
-                            <h3 class="text-2xl font-bold lv-brown">골든 리트리버 "맥스"</h3>
+                <div class="scroll-reveal bg-white rounded-3xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold lv-brown">골든 리트리버 "맥스"</h3>
                             <span class="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-sm font-semibold">대형견</span>
                         </div>
                         
                         <!-- Before/After Interactive Container -->
-                        <div class="before-after-container h-96 rounded-2xl overflow-hidden cursor-pointer" onclick="openImageModal(this.querySelector('.after-image').src, '골든 리트리버 작품')">
+                        <div class="before-after-container rounded-2xl overflow-hidden cursor-pointer" style="height: 280px;" onclick="openImageModal(this.querySelector('.after-image').src, '골든 리트리버 작품')">
                             <img src="louis_vuitton_images/louis_vuitton_page_1_image_1.jpg" alt="골든 리트리버 원본" class="before-image louis-vuitton-img" loading="lazy" decoding="async">
                             <img src="louis_vuitton_images/louis_vuitton_page_1_image_2.jpg" alt="골든 리트리버 캐리커쳐" class="after-image louis-vuitton-img" style="transform: rotate(90deg);" loading="lazy" decoding="async">
                             
@@ -362,15 +363,15 @@
                 </div>
 
                 <!-- Portfolio Item 2 - Small Dog -->
-                <div class="scroll-reveal bg-white rounded-3xl overflow-hidden shadow-lg">
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-6">
-                            <h3 class="text-2xl font-bold lv-brown">푸들 "루루"</h3>
+                <div class="scroll-reveal bg-white rounded-3xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold lv-brown">푸들 "루루"</h3>
                             <span class="bg-pink-100 text-pink-800 px-4 py-2 rounded-full text-sm font-semibold">소형견</span>
                         </div>
                         
                         <!-- Before/After Interactive Container -->
-                        <div class="before-after-container h-96 rounded-2xl overflow-hidden cursor-pointer" onclick="openImageModal(this.querySelector('.after-image').src, '푸들 작품')">
+                        <div class="before-after-container rounded-2xl overflow-hidden cursor-pointer" style="height: 280px;" onclick="openImageModal(this.querySelector('.after-image').src, '푸들 작품')">
                             <img src="louis_vuitton_images/louis_vuitton_page_2_image_1.jpg" alt="푸들 원본" class="before-image louis-vuitton-img" loading="lazy" decoding="async">
                             <img src="louis_vuitton_images/louis_vuitton_page_2_image_2.jpg" alt="푸들 캐리커쳐" class="after-image louis-vuitton-img" style="transform: rotate(90deg);" loading="lazy" decoding="async">
                             
@@ -402,7 +403,7 @@
                 </div>
 
                 <!-- Portfolio Item 3 - Medium Dog -->
-                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <h3 class="text-xl font-bold lv-brown">시바견 "하나"</h3>
@@ -455,7 +456,7 @@
                 </div>
 
                 <!-- Portfolio Item 4 - Cat -->
-                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="400">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <h3 class="text-xl font-bold lv-brown">페르시안 고양이 "프린세스"</h3>
@@ -508,7 +509,7 @@
                 </div>
 
                 <!-- Portfolio Item 5 - Louis Vuitton Work 1 -->
-                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <h3 class="text-xl font-bold lv-brown">루이비통 작품 1</h3>
@@ -572,7 +573,7 @@
                 </div>
 
                 <!-- Portfolio Item 6 - Louis Vuitton Work 2 -->
-                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <h3 class="text-xl font-bold lv-brown">루이비통 작품 2</h3>
@@ -628,7 +629,7 @@
                 </div>
 
                 <!-- Portfolio Item 7 - Louis Vuitton Work 3 -->
-                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <h3 class="text-xl font-bold lv-brown">루이비통 작품 3</h3>
@@ -658,7 +659,7 @@
                 </div>
 
                 <!-- Portfolio Item 8 - Louis Vuitton Work 4 -->
-                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="400">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <h3 class="text-xl font-bold lv-brown">루이비통 작품 4</h3>
@@ -688,7 +689,7 @@
                 </div>
 
                 <!-- Portfolio Item 9 - Louis Vuitton Work 5 -->
-                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="500">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <h3 class="text-xl font-bold lv-brown">루이비통 작품 5</h3>
@@ -718,7 +719,7 @@
                 </div>
 
                 <!-- Portfolio Item 10 - Louis Vuitton Work 6 -->
-                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="600">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <h3 class="text-xl font-bold lv-brown">루이비통 작품 6</h3>
@@ -748,7 +749,7 @@
                 </div>
 
                 <!-- Portfolio Item 11 - Louis Vuitton Work 7 -->
-                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
                     <div class="p-4">
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="text-lg font-bold lv-brown">루이비통 작품 7</h3>
@@ -790,7 +791,7 @@
                 </div>
 
                 <!-- Portfolio Item 12 - Louis Vuitton Work 8 -->
-                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
                     <div class="p-4">
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="text-lg font-bold lv-brown">루이비통 작품 8</h3>
@@ -818,7 +819,7 @@
                 </div>
 
                 <!-- Portfolio Item 13 - Louis Vuitton Work 9 -->
-                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
                     <div class="p-4">
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="text-lg font-bold lv-brown">루이비통 작품 9</h3>
@@ -846,7 +847,7 @@
                 </div>
 
                 <!-- Portfolio Item 14 - Louis Vuitton Work 10 -->
-                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="400">
                     <div class="p-4">
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="text-lg font-bold lv-brown">루이비통 작품 10</h3>
@@ -874,7 +875,7 @@
                 </div>
 
                 <!-- Portfolio Item 15 - Louis Vuitton Work 11 -->
-                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="500">
                     <div class="p-4">
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="text-lg font-bold lv-brown">루이비통 작품 11</h3>
@@ -902,7 +903,7 @@
                 </div>
 
                 <!-- Portfolio Item 16 - Louis Vuitton Work 12 -->
-                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="600">
                     <div class="p-4">
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="text-lg font-bold lv-brown">루이비통 작품 12</h3>
@@ -930,7 +931,7 @@
                 </div>
 
                 <!-- Portfolio Item 17 - Louis Vuitton Work 13 -->
-                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
                     <div class="p-4">
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="text-lg font-bold lv-brown">루이비통 작품 13</h3>
@@ -958,7 +959,7 @@
                 </div>
 
                 <!-- Portfolio Item 18 - Louis Vuitton Work 14 -->
-                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg">
+                <div class="comparison-card bg-white rounded-3xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
                     <div class="p-4">
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="text-lg font-bold lv-brown">루이비통 작품 14</h3>
@@ -1014,7 +1015,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
                 <!-- Excellence 1 -->
-                <div class="text-center p-6 bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl">
+                <div class="text-center p-6 bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl" data-aos="zoom-in" data-aos-delay="100">
                     <div class="w-16 h-16 louis-vuitton-gradient rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-clock text-white text-2xl"></i>
                     </div>
@@ -1023,7 +1024,7 @@
                 </div>
 
                 <!-- Excellence 2 -->
-                <div class="text-center p-6 bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl">
+                <div class="text-center p-6 bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl" data-aos="zoom-in" data-aos-delay="200">
                     <div class="w-16 h-16 louis-vuitton-gradient rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-heart text-white text-2xl"></i>
                     </div>
@@ -1032,7 +1033,7 @@
                 </div>
 
                 <!-- Excellence 3 -->
-                <div class="text-center p-6 bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl">
+                <div class="text-center p-6 bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl" data-aos="zoom-in" data-aos-delay="300">
                     <div class="w-16 h-16 louis-vuitton-gradient rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-crown text-white text-2xl"></i>
                     </div>
@@ -1041,7 +1042,7 @@
                 </div>
 
                 <!-- Excellence 4 -->
-                <div class="text-center p-6 bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl">
+                <div class="text-center p-6 bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl" data-aos="zoom-in" data-aos-delay="400">
                     <div class="w-16 h-16 louis-vuitton-gradient rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-thumbs-up text-white text-2xl"></i>
                     </div>
@@ -1100,7 +1101,21 @@
         </div>
     </footer>
 
+    <!-- AOS (Animate On Scroll) Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <script src="js/main.js"></script>
+    
+    <script>
+        // AOS 초기화
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100,
+            delay: 0
+        });
+    </script>
     
     <!-- Admin Panel -->
     <div id="adminPanel" class="fixed top-4 right-4 z-50 hidden">

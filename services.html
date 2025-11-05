@@ -8,6 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS (Animate On Scroll) Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -162,7 +164,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
                 <!-- Category 1 -->
-                <div class="text-center group cursor-pointer" onclick="location.href='works-fine-art.html'">
+                <div class="text-center group cursor-pointer" onclick="location.href='works-fine-art.html'" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-24 h-24 bg-gradient-to-br from-amber-500 to-orange-600 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-palette text-4xl text-white"></i>
                     </div>
@@ -176,7 +178,7 @@
                 </div>
 
                 <!-- Category 2 -->
-                <div class="text-center group cursor-pointer" onclick="location.href='works-caricature.html'">
+                <div class="text-center group cursor-pointer" onclick="location.href='works-caricature.html'" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-600 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-magic text-4xl text-white"></i>
                     </div>
@@ -190,7 +192,7 @@
                 </div>
 
                 <!-- Category 3 -->
-                <div class="text-center group cursor-pointer" onclick="location.href='works-calligraphy.html'">
+                <div class="text-center group cursor-pointer" onclick="location.href='works-calligraphy.html'" data-aos="fade-up" data-aos-delay="300">
                     <div class="w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-pen-nib text-4xl text-white"></i>
                     </div>
@@ -204,7 +206,7 @@
                 </div>
 
                 <!-- Category 4 -->
-                <div class="text-center group cursor-pointer" onclick="location.href='#event-services'">
+                <div class="text-center group cursor-pointer" onclick="location.href='#event-services'" data-aos="fade-up" data-aos-delay="400">
                     <div class="w-24 h-24 bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-calendar-alt text-4xl text-white"></i>
                     </div>
@@ -234,7 +236,7 @@
             </div>
 
             <!-- Fine Art Section -->
-            <div class="mb-16">
+            <div class="mb-16" data-aos="fade-up" data-aos-delay="100">
                 <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
                     <div class="md:flex">
                         <div class="md:w-1/2 p-8 md:p-12">
@@ -307,7 +309,7 @@
             </div>
 
             <!-- Caricature Section -->
-            <div class="mb-16">
+            <div class="mb-16" data-aos="fade-up" data-aos-delay="200">
                 <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
                     <div class="md:flex md:flex-row-reverse">
                         <div class="md:w-1/2 p-8 md:p-12">
@@ -380,7 +382,7 @@
             </div>
 
             <!-- Calligraphy Section -->
-            <div>
+            <div data-aos="fade-up" data-aos-delay="300">
                 <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
                     <div class="md:flex">
                         <div class="md:w-1/2 p-8 md:p-12">
@@ -469,7 +471,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <!-- Wedding Events -->
-                <div class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-3xl p-8 text-center hover:shadow-lg transition-shadow duration-300">
+                <div class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-3xl p-8 text-center hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-20 h-20 bg-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-heart text-3xl text-white"></i>
                     </div>
@@ -490,7 +492,7 @@
                 </div>
 
                 <!-- Corporate Events -->
-                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 text-center hover:shadow-lg transition-shadow duration-300">
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 text-center hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-20 h-20 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-building text-3xl text-white"></i>
                     </div>
@@ -511,7 +513,7 @@
                 </div>
 
                 <!-- Cultural Programs -->
-                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 text-center hover:shadow-lg transition-shadow duration-300">
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 text-center hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-delay="300">
                     <div class="w-20 h-20 bg-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-users text-3xl text-white"></i>
                     </div>
@@ -689,6 +691,20 @@
         </div>
     </footer>
 
+    <!-- AOS (Animate On Scroll) Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <script src="js/main.js"></script>
+    
+    <script>
+        // AOS 초기화
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100,
+            delay: 0
+        });
+    </script>
 </body>
 </html>
