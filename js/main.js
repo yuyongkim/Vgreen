@@ -488,6 +488,12 @@ document.addEventListener('DOMContentLoaded', function() {
     handleImageErrors();
 });
 
+// 이미지 최적화 스크립트 로드
+const imageOptimizerScript = document.createElement('script');
+imageOptimizerScript.src = 'js/image-optimizer.js';
+imageOptimizerScript.defer = true;
+document.head.appendChild(imageOptimizerScript);
+
 // Analytics and Tracking (placeholder)
 function initAnalytics() {
     // Track portfolio filter usage
