@@ -17,6 +17,41 @@ body {
     overflow-x: hidden;
 }
 
+/* PC 버전 본문 글씨 크기 증가 */
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+    
+    p {
+        font-size: 18px;
+    }
+    
+    /* 본문 텍스트가 포함된 섹션들 */
+    section p:not(.text-sm):not(.text-xs):not(.text-xl):not(.text-2xl):not(.text-3xl):not(.text-4xl) {
+        font-size: 18px;
+    }
+    
+    /* Tailwind의 text-lg 클래스가 적용된 경우도 고려 */
+    .text-lg {
+        font-size: 1.25rem !important; /* 20px */
+    }
+    
+    /* 본문 텍스트 기본 크기보다 작은 경우에도 최소 크기 보장 */
+    .text-gray-600:not(.text-sm):not(.text-xs) {
+        font-size: 18px;
+    }
+    
+    .text-gray-700:not(.text-sm):not(.text-xs) {
+        font-size: 18px;
+    }
+    
+    /* 리스트 아이템도 읽기 쉽게 */
+    li {
+        font-size: 18px;
+    }
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
